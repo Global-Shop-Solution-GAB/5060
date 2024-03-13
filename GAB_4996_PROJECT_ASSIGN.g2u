@@ -1,0 +1,2095 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_QUOTE_ASSG..create
+Gui.F_QUOTE_ASSG..caption("Quote - Assign PRJ")
+Gui.F_QUOTE_ASSG..size(6690,2445)
+Gui.F_QUOTE_ASSG..minx(0)
+Gui.F_QUOTE_ASSG..miny(0)
+Gui.F_QUOTE_ASSG..position(0,0)
+Gui.F_QUOTE_ASSG..event(UnLoad,pr_unload)
+Gui.F_QUOTE_ASSG..forecolor(0)
+Gui.F_QUOTE_ASSG..BackColor(-2147483633)
+Gui.F_QUOTE_ASSG..maxbutton(False)
+Gui.F_QUOTE_ASSG..minbutton(False)
+Gui.F_QUOTE_ASSG..mousepointer(0)
+Gui.F_QUOTE_ASSG.frmPrj.create(frame)
+Gui.F_QUOTE_ASSG.frmPrj.size(2415,765)
+Gui.F_QUOTE_ASSG.frmPrj.position(2090,955)
+Gui.F_QUOTE_ASSG.cmdSave.create(button)
+Gui.F_QUOTE_ASSG.cmdSave.caption("Save")
+Gui.F_QUOTE_ASSG.cmdSave.size(855,375)
+Gui.F_QUOTE_ASSG.cmdSave.position(200,200)
+Gui.F_QUOTE_ASSG.cmdSave.parent("frmPrj")
+Gui.F_QUOTE_ASSG.cmdSave.event(Click,cmdsave_qt_click)
+Gui.F_QUOTE_ASSG.cmdSave.defaultvalue("")
+Gui.F_QUOTE_ASSG.cmdDelete.create(button)
+Gui.F_QUOTE_ASSG.cmdDelete.caption("Delete")
+Gui.F_QUOTE_ASSG.cmdDelete.size(885,375)
+Gui.F_QUOTE_ASSG.cmdDelete.position(1340,200)
+Gui.F_QUOTE_ASSG.cmdDelete.parent("frmPrj")
+Gui.F_QUOTE_ASSG.cmdDelete.event(Click,cmddelete_qt_click)
+Gui.F_QUOTE_ASSG.cmdDelete.defaultvalue("")
+Gui.F_QUOTE_ASSG.lblQuote.create(label,"Quote:",True,915,255,0,200,200,True,0,Arial,8,-2147483633,0)
+Gui.F_QUOTE_ASSG.lblQuote.defaultvalue("")
+Gui.F_QUOTE_ASSG.txtQuote.create(textbox,"",True,915,300,0,160,425,False,0,Arial,8,-2147483643,1)
+Gui.F_QUOTE_ASSG.txtQuote.defaultvalue("")
+Gui.F_QUOTE_ASSG.lblPRJID.create(label,"Project ID:",True,1110,255,0,1220,200,True,0,Arial,8,-2147483633,0)
+Gui.F_QUOTE_ASSG.lblPRJID.defaultvalue("")
+Gui.F_QUOTE_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1180,415,False,0,Arial,8,-2147483643,1)
+Gui.F_QUOTE_ASSG.txtPRJ.defaultvalue("")
+Gui.F_QUOTE_ASSG.cmdPRJID.create(button)
+Gui.F_QUOTE_ASSG.cmdPRJID.caption("^")
+Gui.F_QUOTE_ASSG.cmdPRJID.size(360,300)
+Gui.F_QUOTE_ASSG.cmdPRJID.position(5825,405)
+Gui.F_QUOTE_ASSG.cmdPRJID.event(Click,cmdprjid_qt_click)
+Gui.F_QUOTE_ASSG.cmdPRJID.defaultvalue("")
+Gui.F_QUOTE_ASSG.txtPRJN.create(textbox,"",True,3390,300,0,2435,415,False,0,Arial,8,-2147483643,1)
+Gui.F_QUOTE_ASSG.txtPRJN.defaultvalue("")
+Gui.F_QUOTE_ASSG.lblPrjN.create(label,"Project Name:",True,1110,255,0,2465,200,True,0,Arial,8,-2147483633,0)
+Gui.F_QUOTE_ASSG.lblPrjN.defaultvalue("")
+Gui.F_ORDER_ASSG..create
+Gui.F_ORDER_ASSG..caption("Order - Assign PRJ")
+Gui.F_ORDER_ASSG..size(6690,2445)
+Gui.F_ORDER_ASSG..minx(0)
+Gui.F_ORDER_ASSG..miny(0)
+Gui.F_ORDER_ASSG..position(0,0)
+Gui.F_ORDER_ASSG..event(UnLoad,pr_unload)
+Gui.F_ORDER_ASSG..forecolor(0)
+Gui.F_ORDER_ASSG..BackColor(-2147483633)
+Gui.F_ORDER_ASSG..maxbutton(False)
+Gui.F_ORDER_ASSG..minbutton(False)
+Gui.F_ORDER_ASSG..mousepointer(0)
+Gui.F_ORDER_ASSG.frmprj.create(frame)
+Gui.F_ORDER_ASSG.frmprj.size(2415,765)
+Gui.F_ORDER_ASSG.frmprj.position(2120,980)
+Gui.F_ORDER_ASSG.cmdSave.create(button)
+Gui.F_ORDER_ASSG.cmdSave.caption("Save")
+Gui.F_ORDER_ASSG.cmdSave.size(855,375)
+Gui.F_ORDER_ASSG.cmdSave.position(200,200)
+Gui.F_ORDER_ASSG.cmdSave.parent("frmprj")
+Gui.F_ORDER_ASSG.cmdSave.event(Click,cmdsave_oe_click)
+Gui.F_ORDER_ASSG.cmdSave.defaultvalue("")
+Gui.F_ORDER_ASSG.cmdDelete.create(button)
+Gui.F_ORDER_ASSG.cmdDelete.caption("Delete")
+Gui.F_ORDER_ASSG.cmdDelete.size(885,375)
+Gui.F_ORDER_ASSG.cmdDelete.position(1340,200)
+Gui.F_ORDER_ASSG.cmdDelete.parent("frmprj")
+Gui.F_ORDER_ASSG.cmdDelete.event(Click,cmddelete_oe_click)
+Gui.F_ORDER_ASSG.cmdDelete.defaultvalue("")
+Gui.F_ORDER_ASSG.txtOrder.create(textbox,"",True,930,300,0,170,425,False,0,Arial,8,-2147483643,1)
+Gui.F_ORDER_ASSG.txtOrder.defaultvalue("")
+Gui.F_ORDER_ASSG.lblOrder.create(label,"Order:",True,915,255,1,200,200,True,0,Arial,8,-2147483633,0)
+Gui.F_ORDER_ASSG.lblOrder.defaultvalue("")
+Gui.F_ORDER_ASSG.lblPrjID.create(label,"Project ID:",True,1080,255,1,1205,200,True,0,Arial,8,-2147483633,0)
+Gui.F_ORDER_ASSG.lblPrjID.defaultvalue("")
+Gui.F_ORDER_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1190,425,False,0,Arial,8,-2147483643,1)
+Gui.F_ORDER_ASSG.txtPRJ.defaultvalue("")
+Gui.F_ORDER_ASSG.cmdPRJID.create(button)
+Gui.F_ORDER_ASSG.cmdPRJID.caption("^")
+Gui.F_ORDER_ASSG.cmdPRJID.size(360,300)
+Gui.F_ORDER_ASSG.cmdPRJID.position(5855,425)
+Gui.F_ORDER_ASSG.cmdPRJID.event(Click,cmdprjid_oe_click)
+Gui.F_ORDER_ASSG.cmdPRJID.defaultvalue("")
+Gui.F_ORDER_ASSG.txtPRJN.create(textbox,"",True,3405,300,0,2440,415,False,0,Arial,8,-2147483643,1)
+Gui.F_ORDER_ASSG.txtPRJN.defaultvalue("")
+Gui.F_ORDER_ASSG.lblPrjN.create(label,"Project Name:",True,1875,255,0,2495,200,True,0,Arial,8,-2147483633,0)
+Gui.F_ORDER_ASSG.lblPrjN.defaultvalue("")
+Gui.F_PO_ASSG..create
+Gui.F_PO_ASSG..caption("PO - Assign PRJ")
+Gui.F_PO_ASSG..size(7260,2415)
+Gui.F_PO_ASSG..minx(0)
+Gui.F_PO_ASSG..miny(0)
+Gui.F_PO_ASSG..position(0,0)
+Gui.F_PO_ASSG..event(UnLoad,pr_unload)
+Gui.F_PO_ASSG..forecolor(0)
+Gui.F_PO_ASSG..BackColor(-2147483633)
+Gui.F_PO_ASSG..maxbutton(False)
+Gui.F_PO_ASSG..minbutton(False)
+Gui.F_PO_ASSG..mousepointer(0)
+Gui.F_PO_ASSG.frmprj.create(frame)
+Gui.F_PO_ASSG.frmprj.size(2415,765)
+Gui.F_PO_ASSG.frmprj.position(2315,995)
+Gui.F_PO_ASSG.cmdSave.create(button)
+Gui.F_PO_ASSG.cmdSave.caption("Save")
+Gui.F_PO_ASSG.cmdSave.size(855,375)
+Gui.F_PO_ASSG.cmdSave.position(195,195)
+Gui.F_PO_ASSG.cmdSave.parent("frmprj")
+Gui.F_PO_ASSG.cmdSave.event(Click,cmdsave_po_click)
+Gui.F_PO_ASSG.cmdSave.defaultvalue("")
+Gui.F_PO_ASSG.cmdDelete.create(button)
+Gui.F_PO_ASSG.cmdDelete.caption("Delete")
+Gui.F_PO_ASSG.cmdDelete.size(885,375)
+Gui.F_PO_ASSG.cmdDelete.position(1340,200)
+Gui.F_PO_ASSG.cmdDelete.parent("frmprj")
+Gui.F_PO_ASSG.cmdDelete.event(Click,cmddelete_po_click)
+Gui.F_PO_ASSG.cmdDelete.defaultvalue("")
+Gui.F_PO_ASSG.lblPO.create(label,"Purchase Order:",True,1245,255,1,200,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PO_ASSG.lblPO.defaultvalue("")
+Gui.F_PO_ASSG.txtPO.create(textbox,"",True,1170,300,0,200,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PO_ASSG.txtPO.defaultvalue("")
+Gui.F_PO_ASSG.lblPrjID.create(label,"Project ID:",True,1080,255,1,1975,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PO_ASSG.lblPrjID.defaultvalue("")
+Gui.F_PO_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1945,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PO_ASSG.txtPRJ.defaultvalue("")
+Gui.F_PO_ASSG.cmdPRJID.create(button)
+Gui.F_PO_ASSG.cmdPRJID.caption("^")
+Gui.F_PO_ASSG.cmdPRJID.size(360,300)
+Gui.F_PO_ASSG.cmdPRJID.position(6555,405)
+Gui.F_PO_ASSG.cmdPRJID.event(Click,cmdprjid_po_click)
+Gui.F_PO_ASSG.cmdPRJID.defaultvalue("")
+Gui.F_PO_ASSG.txtPRJN.create(textbox,"",True,3360,300,0,3190,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PO_ASSG.txtPRJN.defaultvalue("")
+Gui.F_PO_ASSG.lblPrjN.create(label,"Project Name:",True,2430,255,1,3220,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PO_ASSG.lblPrjN.defaultvalue("")
+Gui.F_PO_ASSG.txtPOLine.create(textbox,"",True,480,300,0,1370,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PO_ASSG.txtPOLine.defaultvalue("")
+Gui.F_INVOICE_ASSG..create
+Gui.F_INVOICE_ASSG..caption("AP Invoice - Assign PRJ")
+Gui.F_INVOICE_ASSG..size(6675,2235)
+Gui.F_INVOICE_ASSG..minx(0)
+Gui.F_INVOICE_ASSG..miny(0)
+Gui.F_INVOICE_ASSG..position(0,0)
+Gui.F_INVOICE_ASSG..event(UnLoad,pr_unload)
+Gui.F_INVOICE_ASSG..forecolor(0)
+Gui.F_INVOICE_ASSG..BackColor(-2147483633)
+Gui.F_INVOICE_ASSG..maxbutton(False)
+Gui.F_INVOICE_ASSG..minbutton(False)
+Gui.F_INVOICE_ASSG..mousepointer(0)
+Gui.F_INVOICE_ASSG.frmprj.create(frame)
+Gui.F_INVOICE_ASSG.frmprj.size(2415,765)
+Gui.F_INVOICE_ASSG.frmprj.position(2105,800)
+Gui.F_INVOICE_ASSG.cmdSave.create(button)
+Gui.F_INVOICE_ASSG.cmdSave.caption("Save")
+Gui.F_INVOICE_ASSG.cmdSave.size(855,375)
+Gui.F_INVOICE_ASSG.cmdSave.position(200,200)
+Gui.F_INVOICE_ASSG.cmdSave.parent("frmprj")
+Gui.F_INVOICE_ASSG.cmdSave.event(Click,cmdsave_api_click)
+Gui.F_INVOICE_ASSG.cmdSave.defaultvalue("")
+Gui.F_INVOICE_ASSG.cmdDelete.create(button)
+Gui.F_INVOICE_ASSG.cmdDelete.caption("Delete")
+Gui.F_INVOICE_ASSG.cmdDelete.size(885,375)
+Gui.F_INVOICE_ASSG.cmdDelete.position(1340,200)
+Gui.F_INVOICE_ASSG.cmdDelete.parent("frmprj")
+Gui.F_INVOICE_ASSG.cmdDelete.event(Click,cmddelete_api_click)
+Gui.F_INVOICE_ASSG.cmdDelete.defaultvalue("")
+Gui.F_INVOICE_ASSG.txtAPInvoice.create(textbox,"",True,915,300,0,170,275,False,0,Arial,8,-2147483643,1)
+Gui.F_INVOICE_ASSG.txtAPInvoice.defaultvalue("")
+Gui.F_INVOICE_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1160,275,False,0,Arial,8,-2147483643,1)
+Gui.F_INVOICE_ASSG.txtPRJ.defaultvalue("")
+Gui.F_INVOICE_ASSG.lblInvoice.create(label,"AP Invoice:",True,1245,255,1,200,65,True,0,Arial,8,-2147483633,0)
+Gui.F_INVOICE_ASSG.lblInvoice.defaultvalue("")
+Gui.F_INVOICE_ASSG.lblPRJID.create(label,"Project ID:",True,1110,255,1,1175,65,True,0,Arial,8,-2147483633,0)
+Gui.F_INVOICE_ASSG.lblPRJID.defaultvalue("")
+Gui.F_INVOICE_ASSG.cmdPrjID.create(button)
+Gui.F_INVOICE_ASSG.cmdPrjID.caption("^")
+Gui.F_INVOICE_ASSG.cmdPrjID.size(360,300)
+Gui.F_INVOICE_ASSG.cmdPrjID.position(5870,260)
+Gui.F_INVOICE_ASSG.cmdPrjID.event(Click,cmdprjid_api_click)
+Gui.F_INVOICE_ASSG.cmdPrjID.defaultvalue("")
+Gui.F_INVOICE_ASSG.txtPRJN.create(textbox,"",True,3480,300,0,2405,270,False,0,Arial,8,-2147483643,1)
+Gui.F_INVOICE_ASSG.txtPRJN.defaultvalue("")
+Gui.F_INVOICE_ASSG.lblPrjN.create(label,"Project Name:",True,2700,255,1,2435,65,True,0,Arial,8,-2147483633,0)
+Gui.F_INVOICE_ASSG.lblPrjN.defaultvalue("")
+Gui.F_INVOICE_ASSG.lblVendor.Create(Label,"Label",False,1890,255,0,180,900,True,0,"Arial",8,-2147483633,0)
+Gui.F_JOB_ASSG..create
+Gui.F_JOB_ASSG..caption("Work Order - Assign PRJ")
+Gui.F_JOB_ASSG..size(9555,2235)
+Gui.F_JOB_ASSG..minx(0)
+Gui.F_JOB_ASSG..miny(0)
+Gui.F_JOB_ASSG..position(0,0)
+Gui.F_JOB_ASSG..event(UnLoad,pr_unload)
+Gui.F_JOB_ASSG..forecolor(0)
+Gui.F_JOB_ASSG..BackColor(-2147483633)
+Gui.F_JOB_ASSG..maxbutton(False)
+Gui.F_JOB_ASSG..minbutton(False)
+Gui.F_JOB_ASSG..mousepointer(0)
+Gui.F_JOB_ASSG.frmPrj.create(frame)
+Gui.F_JOB_ASSG.frmPrj.size(2415,765)
+Gui.F_JOB_ASSG.frmPrj.position(1800,810)
+Gui.F_JOB_ASSG.cmdSave.create(button)
+Gui.F_JOB_ASSG.cmdSave.caption("Save")
+Gui.F_JOB_ASSG.cmdSave.size(855,375)
+Gui.F_JOB_ASSG.cmdSave.position(200,200)
+Gui.F_JOB_ASSG.cmdSave.parent("frmPrj")
+Gui.F_JOB_ASSG.cmdSave.event(Click,cmdsave_wo_click)
+Gui.F_JOB_ASSG.cmdSave.defaultvalue("")
+Gui.F_JOB_ASSG.cmdDelete.create(button)
+Gui.F_JOB_ASSG.cmdDelete.caption("Delete")
+Gui.F_JOB_ASSG.cmdDelete.size(885,375)
+Gui.F_JOB_ASSG.cmdDelete.position(1340,200)
+Gui.F_JOB_ASSG.cmdDelete.parent("frmPrj")
+Gui.F_JOB_ASSG.cmdDelete.event(Click,cmddelete_wo_click)
+Gui.F_JOB_ASSG.cmdDelete.defaultvalue("")
+Gui.F_JOB_ASSG.lblWO.create(label,"Work Order:",True,915,255,0,155,50,True,0,Arial,8,-2147483633,0)
+Gui.F_JOB_ASSG.lblWO.defaultvalue("")
+Gui.F_JOB_ASSG.lblPRJID.create(label,"Project ID:",True,735,255,0,2235,45,True,0,Arial,8,-2147483633,0)
+Gui.F_JOB_ASSG.lblPRJID.defaultvalue("")
+Gui.F_JOB_ASSG.lblPrjN.create(label,"Project Name:",True,1185,255,0,3510,45,True,0,Arial,8,-2147483633,0)
+Gui.F_JOB_ASSG.lblPrjN.defaultvalue("")
+Gui.F_JOB_ASSG.txtWO.create(textbox,"",True,1020,300,0,120,255,False,0,Arial,8,-2147483643,1)
+Gui.F_JOB_ASSG.txtWO.defaultvalue("")
+Gui.F_JOB_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,2235,255,False,0,Arial,8,-2147483643,1)
+Gui.F_JOB_ASSG.txtPRJ.defaultvalue("")
+Gui.F_JOB_ASSG.txtPRJN.create(textbox,"",True,3480,300,0,3525,255,False,0,Arial,8,-2147483643,1)
+Gui.F_JOB_ASSG.txtPRJN.defaultvalue("")
+Gui.F_JOB_ASSG.cmdPrjID.create(button)
+Gui.F_JOB_ASSG.cmdPrjID.caption("^")
+Gui.F_JOB_ASSG.cmdPrjID.size(360,300)
+Gui.F_JOB_ASSG.cmdPrjID.position(7065,255)
+Gui.F_JOB_ASSG.cmdPrjID.event(Click,cmdprjid_wo_click)
+Gui.F_JOB_ASSG.cmdPrjID.defaultvalue("")
+Gui.F_JOB_ASSG.txtSuffix.Create(TextBox,"",True,720,300,0,1200,255,False,0,"Arial",8,-2147483643,1)
+Gui.F_PR_ASSG..create
+Gui.F_PR_ASSG..caption("PR - Assign PRJ")
+Gui.F_PR_ASSG..size(7260,2415)
+Gui.F_PR_ASSG..minx(0)
+Gui.F_PR_ASSG..miny(0)
+Gui.F_PR_ASSG..position(0,0)
+Gui.F_PR_ASSG..event(UnLoad,pr_unload)
+Gui.F_PR_ASSG..forecolor(0)
+Gui.F_PR_ASSG..BackColor(-2147483633)
+Gui.F_PR_ASSG..maxbutton(False)
+Gui.F_PR_ASSG..minbutton(False)
+Gui.F_PR_ASSG..mousepointer(0)
+Gui.F_PR_ASSG.frmprj.create(frame)
+Gui.F_PR_ASSG.frmprj.size(2415,765)
+Gui.F_PR_ASSG.frmprj.position(2315,995)
+Gui.F_PR_ASSG.cmdSave.create(button)
+Gui.F_PR_ASSG.cmdSave.caption("Save")
+Gui.F_PR_ASSG.cmdSave.size(855,375)
+Gui.F_PR_ASSG.cmdSave.position(195,195)
+Gui.F_PR_ASSG.cmdSave.parent("frmprj")
+Gui.F_PR_ASSG.cmdSave.event(Click,cmdsave_pr_click)
+Gui.F_PR_ASSG.cmdSave.defaultvalue("")
+Gui.F_PR_ASSG.cmdDelete.create(button)
+Gui.F_PR_ASSG.cmdDelete.caption("Delete")
+Gui.F_PR_ASSG.cmdDelete.size(885,375)
+Gui.F_PR_ASSG.cmdDelete.position(1340,200)
+Gui.F_PR_ASSG.cmdDelete.parent("frmprj")
+Gui.F_PR_ASSG.cmdDelete.event(Click,cmddelete_pr_click)
+Gui.F_PR_ASSG.cmdDelete.defaultvalue("")
+Gui.F_PR_ASSG.lblPR.create(label,"Purchase Requisition:",True,1245,255,1,200,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PR_ASSG.lblPR.defaultvalue("")
+Gui.F_PR_ASSG.txtPR.create(textbox,"",True,1170,300,0,200,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PR_ASSG.txtPR.defaultvalue("")
+Gui.F_PR_ASSG.lblPrjID.create(label,"Project ID:",True,1080,255,1,1975,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PR_ASSG.lblPrjID.defaultvalue("")
+Gui.F_PR_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1945,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PR_ASSG.txtPRJ.defaultvalue("")
+Gui.F_PR_ASSG.cmdPRJID.create(button)
+Gui.F_PR_ASSG.cmdPRJID.caption("^")
+Gui.F_PR_ASSG.cmdPRJID.size(360,300)
+Gui.F_PR_ASSG.cmdPRJID.position(6550,410)
+Gui.F_PR_ASSG.cmdPRJID.event(Click,cmdprjid_pr_click)
+Gui.F_PR_ASSG.cmdPRJID.defaultvalue("")
+Gui.F_PR_ASSG.txtPRJN.create(textbox,"",True,3360,300,0,3190,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PR_ASSG.txtPRJN.defaultvalue("")
+Gui.F_PR_ASSG.lblPrjN.create(label,"Project Name:",True,2430,255,1,3220,200,True,0,Arial,8,-2147483633,0)
+Gui.F_PR_ASSG.lblPrjN.defaultvalue("")
+Gui.F_PR_ASSG.txtPRLine.create(textbox,"",True,480,300,0,1370,425,False,0,Arial,8,-2147483643,1)
+Gui.F_PR_ASSG.txtPRLine.defaultvalue("")
+Gui.F_GL_ASSG..create
+Gui.F_GL_ASSG..caption("PR - Assign PRJ")
+Gui.F_GL_ASSG..size(7260,2415)
+Gui.F_GL_ASSG..minx(0)
+Gui.F_GL_ASSG..miny(0)
+Gui.F_GL_ASSG..position(0,0)
+Gui.F_GL_ASSG..event(UnLoad,pr_unload)
+Gui.F_GL_ASSG..forecolor(0)
+Gui.F_GL_ASSG..BackColor(-2147483633)
+Gui.F_GL_ASSG..maxbutton(False)
+Gui.F_GL_ASSG..minbutton(False)
+Gui.F_GL_ASSG..mousepointer(0)
+Gui.F_GL_ASSG.frmprj.create(frame)
+Gui.F_GL_ASSG.frmprj.size(2415,765)
+Gui.F_GL_ASSG.frmprj.position(2315,995)
+Gui.F_GL_ASSG.cmdSave.create(button)
+Gui.F_GL_ASSG.cmdSave.caption("Save")
+Gui.F_GL_ASSG.cmdSave.size(855,375)
+Gui.F_GL_ASSG.cmdSave.position(200,200)
+Gui.F_GL_ASSG.cmdSave.parent("frmprj")
+Gui.F_GL_ASSG.cmdSave.event(Click,cmdsave_gl_click)
+Gui.F_GL_ASSG.cmdSave.defaultvalue("")
+Gui.F_GL_ASSG.cmdDelete.create(button)
+Gui.F_GL_ASSG.cmdDelete.caption("Delete")
+Gui.F_GL_ASSG.cmdDelete.size(885,375)
+Gui.F_GL_ASSG.cmdDelete.position(1340,200)
+Gui.F_GL_ASSG.cmdDelete.parent("frmprj")
+Gui.F_GL_ASSG.cmdDelete.event(Click,cmddelete_gl_click)
+Gui.F_GL_ASSG.cmdDelete.defaultvalue("")
+Gui.F_GL_ASSG.lblBatch.create(label,"Batch No.:",True,1245,255,1,200,200,True,0,Arial,8,-2147483633,0)
+Gui.F_GL_ASSG.lblBatch.defaultvalue("")
+Gui.F_GL_ASSG.txtBatch.create(textbox,"",True,1170,300,0,200,425,False,0,Arial,8,-2147483643,1)
+Gui.F_GL_ASSG.txtBatch.defaultvalue("")
+Gui.F_GL_ASSG.lblPrjID.create(label,"Project ID:",True,1080,255,1,1975,200,True,0,Arial,8,-2147483633,0)
+Gui.F_GL_ASSG.lblPrjID.defaultvalue("")
+Gui.F_GL_ASSG.txtPRJ.create(textbox,"",True,1215,300,0,1945,425,False,0,Arial,8,-2147483643,1)
+Gui.F_GL_ASSG.txtPRJ.defaultvalue("")
+Gui.F_GL_ASSG.cmdPRJID.create(button)
+Gui.F_GL_ASSG.cmdPRJID.caption("^")
+Gui.F_GL_ASSG.cmdPRJID.size(360,300)
+Gui.F_GL_ASSG.cmdPRJID.position(6555,405)
+Gui.F_GL_ASSG.cmdPRJID.event(Click,cmdprjid_gl_click)
+Gui.F_GL_ASSG.cmdPRJID.defaultvalue("")
+Gui.F_GL_ASSG.txtPRJN.create(textbox,"",True,3360,300,0,3190,425,False,0,Arial,8,-2147483643,1)
+Gui.F_GL_ASSG.txtPRJN.defaultvalue("")
+Gui.F_GL_ASSG.lblPrjN.create(label,"Project Name:",True,2430,255,1,3220,200,True,0,Arial,8,-2147483633,0)
+Gui.F_GL_ASSG.lblPrjN.defaultvalue("")
+Gui.F_GL_ASSG.txtBatchLine.create(textbox,"",True,480,300,0,1370,425,False,0,Arial,8,-2147483643,1)
+Gui.F_GL_ASSG.txtBatchLine.defaultvalue("")
+Gui.F_MULTINVC_ASSG..Create
+Gui.F_MULTINVC_ASSG..Caption("AP Invoice - Multiple Account Prj Assign")
+Gui.F_MULTINVC_ASSG..Size(12990,3780)
+Gui.F_MULTINVC_ASSG..MinX(0)
+Gui.F_MULTINVC_ASSG..MinY(0)
+Gui.F_MULTINVC_ASSG..Position(0,0)
+Gui.F_MULTINVC_ASSG..FontSize(9)
+Gui.F_MULTINVC_ASSG..BackColor(-2147483633)
+Gui.F_MULTINVC_ASSG..MousePointer(0)
+Gui.F_MULTINVC_ASSG..Event(UnLoad,F_MULTINVC_ASSG_Unload)
+Gui.F_MULTINVC_ASSG.GsGCAP.Create(GsGridControl)
+Gui.F_MULTINVC_ASSG.GsGCAP.Size(12555,3030)
+Gui.F_MULTINVC_ASSG.GsGCAP.Position(75,90)
+Gui.F_MULTINVC_ASSG.GsGCAP.Event(RowCellClick,GsGCAP_RowCellClick)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sQuote.Declare(String)
+V.Local.sOrder.Declare(String)
+V.Local.sPO.Declare(String)
+V.Local.sPOLine.Declare(String)
+V.Local.sPR.Declare
+V.Local.sPRLine.Declare
+V.Local.sVendor.Declare
+V.Local.sWO.Declare(String)
+V.Local.sInvoice.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,10710)
+	V.Passed.000202.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,11560)
+	V.Passed.000202.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16190)
+	V.Passed.000154.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,17050)
+	V.Passed.000101.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35105)
+	V.Passed.000052.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16630)
+	V.Passed.000092.Set("Project Assig")
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,46710)
+	V.Passed.000023.Set("Project Assig")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,10970)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sQuote)
+	Gui.F_QUOTE_ASSG.txtQuote.Text(V.Local.sQuote)
+	F.Intrinsic.Control.If(V.Local.sQuote,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Subloadprj_qt)
+		Gui.F_QUOTE_ASSG..Show
+	F.Intrinsic.Control.EndIf
+'Quote header - Post screen load
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,10721)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+	F.Intrinsic.Control.If(V.Local.sOrder,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(checkPrjQte)
+	F.Intrinsic.Control.EndIf
+'Quote header - Post save hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,10923)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+	F.Intrinsic.Control.If(V.Local.sOrder,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(checkPrjQte)
+	F.Intrinsic.Control.EndIf
+'Order entry header - order selected
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,11565)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+	F.Intrinsic.Control.If(V.Local.sOrder,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(checkPrjSO)
+	F.Intrinsic.Control.EndIf
+'Order header - order selected
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,11872)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+	F.Intrinsic.Control.If(V.Local.sOrder,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(checkPrjSO)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,11920)
+	F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+	Gui.F_ORDER_ASSG.txtOrder.Text(V.Local.sOrder)
+	F.Intrinsic.Control.If(V.Local.sOrder,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Subloadprj_oe)
+		Gui.F_ORDER_ASSG..Show
+	F.Intrinsic.Control.EndIf
+'New PO create
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,15170)
+	F.Intrinsic.Control.CallSub(convertprtopo)
+'Work Order - Post OK Hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16800)
+	F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	F.Intrinsic.Control.CallSub(checkPrjWO)
+'PO line pre-save
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,17060)
+	F.Intrinsic.Control.CallSub(checkpolineglaccount)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,17170)
+	F.Intrinsic.String.LPad(V.Passed.008002,"0",7,V.Local.sPO)
+	Gui.F_PO_ASSG.txtPO.Text(V.Local.sPO)
+	F.Intrinsic.String.Left(V.Passed.008001,3,V.Local.sPOLine)
+	Gui.F_PO_ASSG.txtPOLine.Text(V.Local.sPOLine)
+	F.Intrinsic.Control.If(V.Local.sPO,<>,"0000000")
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Subloadprj_po)
+		Gui.F_PO_ASSG..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35110)
+	F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	F.Intrinsic.Control.CallSub(checkPrjAPI)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35122)
+	F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	V.Local.sInvoice.Set(V.Passed.000018)
+	V.Local.sVendor.Set(V.Passed.000002)
+	Gui.F_INVOICE_ASSG.txtAPInvoice.Text(V.Local.sInvoice)
+	Gui.F_INVOICE_ASSG.lblVendor.Caption(V.Local.sVendor.Trim)
+	F.Intrinsic.Control.If(V.Local.sInvoice,<>,"")
+		F.Intrinsic.Control.CallSub(Subloadprj_api)
+		Gui.F_INVOICE_ASSG..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16680)
+	F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	V.Local.sWO.Set(V.Passed.000003)
+	Gui.F_JOB_ASSG.txtWO.Text(V.Local.sWO)
+	Gui.F_JOB_ASSG.txtSuffix.Text(V.Passed.000004)
+	F.Intrinsic.Control.If(V.Local.sWO,<>,"")
+		F.Intrinsic.Control.CallSub(Subloadprj_wo)
+		Gui.F_JOB_ASSG..Show
+	F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16244)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16242)
+	'Purchase requisition post save line
+	F.Intrinsic.Control.CallSub(checkprojectpr)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16260)
+	'Purchase requisition script 2
+	F.Intrinsic.Control.CallSub(tagProject2PR)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,42400)
+	'Update project and tax code
+	F.Intrinsic.Control.CallSub(UpdateGLBatchData)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,46730)
+	'GL journal entry script 2
+	F.Intrinsic.Control.CallSub(subLoadPrj_GL)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,35135)
+	'AP Invoice multiple accounts - Pre save
+	
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.subEnd.Start
+F.Intrinsic.Control.End
+
+Program.Sub.subEnd.End
+
+Program.Sub.cmdprjid_qt_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_qt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project",conx,"Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_QUOTE_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_QUOTE_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_qt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprjid_qt_click.End
+
+Program.Sub.cmdsave_qt_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_qt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_QUOTE_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sSql.Set("Select ID_PRJ, VALUE,TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='Q' AND VALUE='",V.Screen.F_QUOTE_ASSG!txtQuote.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSaveQte",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveQte.EOF,=,"True")
+		F.ODBC.Conx!rstSaveQte.AddNew
+		F.ODBC.Conx!rstSaveQte.Set!ID_PRJ(V.Screen.F_QUOTE_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveQte.Set!VALUE(V.Screen.F_QUOTE_ASSG!txtQuote.Text)
+		F.ODBC.Conx!rstSaveQte.Set!TYPE("Q")
+		F.ODBC.Conx!rstSaveQte.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Quote Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSaveQte.Set!ID_PRJ(V.Screen.F_QUOTE_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveQte.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Quote Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstSaveQte.Close
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_qt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_qt_click.End
+
+Program.Sub.cmddelete_qt_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_qt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+V.Local.sSql.Set("Select ID_PRJ, VALUE From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='Q' AND VALUE='",V.Screen.F_QUOTE_ASSG!txtQuote.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelQte",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelQte.EOF,=,"False")
+	F.ODBC.Conx!rstDelQte.Delete
+	F.ODBC.Conx!rstDelQte.Update
+	F.Intrinsic.UI.Msgbox("Project ID - Quote Info Deleted","PRJ ID Message")
+	Gui.F_QUOTE_ASSG.txtPRJ.Text("")
+	Gui.F_QUOTE_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelQte.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_qt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmddelete_qt_click.End
+
+Program.Sub.cmdprjid_oe_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_oe_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project",conx,"Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_ORDER_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_ORDER_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_oe_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprjid_oe_click.End
+
+Program.Sub.cmdsave_oe_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_oe_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_ORDER_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sSql.Set("Select ID_PRJ, VALUE,TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='O' AND VALUE='",V.Screen.F_ORDER_ASSG!txtOrder.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSaveOrd",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveOrd.EOF,=,"True")
+		F.ODBC.Conx!rstSaveOrd.AddNew
+		F.ODBC.Conx!rstSaveOrd.Set!ID_PRJ(V.Screen.F_ORDER_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveOrd.Set!VALUE(V.Screen.F_ORDER_ASSG!txtOrder.Text)
+		F.ODBC.Conx!rstSaveOrd.Set!TYPE("O")
+		F.ODBC.Conx!rstSaveOrd.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Order Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSaveOrd.Set!ID_PRJ(V.Screen.F_ORDER_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveOrd.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Order Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstSaveOrd.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_oe_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_oe_click.End
+
+Program.Sub.cmddelete_oe_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_oe_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+V.Local.sSql.Set("Select ID_PRJ, VALUE From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='O' AND VALUE='",V.Screen.F_ORDER_ASSG!txtOrder.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelOrd",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelOrd.EOF,=,"False")
+	F.ODBC.Conx!rstDelOrd.Delete
+	F.ODBC.Conx!rstDelOrd.Update
+	F.Intrinsic.UI.Msgbox("Project ID - Order Info Deleted","PRJ ID Message")
+	Gui.F_ORDER_ASSG.txtPRJ.Text("")
+	Gui.F_ORDER_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelOrd.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_oe_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmddelete_oe_click.End
+
+Program.Sub.subLoadPrj_oe.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_oe_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sOrder.Declare
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sOrder.Set(V.Screen.F_ORDER_ASSG!txtOrder.Text)
+V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ as ID,GAB_PRJ_DESC.DESCR_PRJ as Description from GAB_PRJ_DATAS LEFT JOIN GAB_PRJ_DESC ON GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ WHERE ")
+F.Intrinsic.String.Concat(V.Local.sSql," GAB_PRJ_DATAS.TYPE='O' AND GAB_PRJ_DATAS.VALUE='",V.Local.sOrder.Trim,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetOrd",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstGetOrd.EOF,=,"False")
+	Gui.F_ORDER_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetOrd.FieldVal!ID)
+	Gui.F_ORDER_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetOrd.FieldVal!Description)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstGetOrd.Close
+
+'F.ODBC.Connection!Conx.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subLoadPrj_oe_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subLoadPrj_oe.End
+
+Program.Sub.subLoadPrj_qt.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_qt_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='Q' AND VALUE='",V.Screen.F_QUOTE_ASSG!txtQuote.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetQte",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstGetQte.EOF,=,"False")
+	Gui.F_QUOTE_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetQte.FieldVal!ID_PRJ)
+	Gui.F_QUOTE_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetQte.FieldVal!DESCR_PRJ)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstGetQte.Close
+
+'F.ODBC.Connection!Conx.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subLoadPrj_qt_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subLoadPrj_qt.End
+
+Program.Sub.cmdsave_po_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_po_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_PO_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sSql.Set("Select ID_PRJ, VALUE,VALUE2,TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='P' AND VALUE='",V.Screen.F_PO_ASSG!txtPO.Text,"' AND VALUE2='",V.Screen.F_PO_ASSG!txtPOLine.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSavePO",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSavePO.EOF,=,"True")
+		F.ODBC.Conx!rstSavePO.AddNew
+		F.ODBC.Conx!rstSavePO.Set!ID_PRJ(V.Screen.F_PO_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSavePO.Set!VALUE(V.Screen.F_PO_ASSG!txtPO.Text)
+		F.ODBC.Conx!rstSavePO.Set!VALUE2(V.Screen.F_PO_ASSG!txtPOLine.Text)
+		F.ODBC.Conx!rstSavePO.Set!TYPE("P")
+		F.ODBC.Conx!rstSavePO.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Purchase Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSavePO.Set!ID_PRJ(V.Screen.F_PO_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSavePO.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Purchase Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstSavePO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_po_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_po_click.End
+
+Program.Sub.cmddelete_po_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_po_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+V.Local.sSql.Set("Select ID_PRJ, VALUE From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='P' AND VALUE='",V.Screen.F_PO_ASSG!txtPO.Text,"' AND VALUE2='",V.Screen.F_PO_ASSG!txtPOLine.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelPO",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelPO.EOF,=,"False")
+	F.ODBC.Conx!rstDelPO.Delete
+	F.ODBC.Conx!rstDelPO.Update
+	F.Intrinsic.UI.Msgbox("Project ID - Purchase Info Deleted","PRJ ID Message")
+	Gui.F_PO_ASSG.txtPRJ.Text("")
+	Gui.F_PO_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelPO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_po_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmddelete_po_click.End
+
+Program.Sub.cmdprjid_po_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_po_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project","conx","Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_PO_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_PO_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_po_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprjid_po_click.End
+
+Program.Sub.subLoadPrj_po.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_po_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sPR.Declare
+V.Local.sPRLine.Declare
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sPR.Set(Variable.Passed.000016)
+V.Local.sPRLine.Set(Variable.Passed.000051)
+
+F.Intrinsic.Control.If(V.Local.sPR.Trim,=,"")
+	V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+	F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='P' AND VALUE='",V.Screen.F_PO_ASSG!txtPO.Text,"' AND VALUE2='",V.Screen.F_PO_ASSG!txtPOLine.text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetPO",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstGetPO.EOF,=,"False")
+		Gui.F_PO_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetPO.FieldVal!ID_PRJ)
+		Gui.F_PO_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetPO.FieldVal!DESCR_PRJ)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rstGetPO.Close
+F.Intrinsic.Control.Else
+	V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+	F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='P' AND VALUE='",V.Screen.F_PO_ASSG!txtPO.Text,"' AND VALUE2='",V.Screen.F_PO_ASSG!txtPOLine.text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetPO",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstGetPO.EOF,=,"False")
+		Gui.F_PO_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetPO.FieldVal!ID_PRJ)
+		Gui.F_PO_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetPO.FieldVal!DESCR_PRJ)
+	F.Intrinsic.Control.Else
+		V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+		F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='R' AND VALUE='",V.Local.sPR.Trim,"' AND VALUE2='",V.Local.sPRLine.Trim,"'",V.Local.sSql)
+		F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetPR",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Conx!rstGetPR.EOF,=,"False")
+			Gui.F_PO_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetPR.FieldVal!ID_PRJ)
+			Gui.F_PO_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetPR.FieldVal!DESCR_PRJ)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Conx!rstGetPR.Close
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rstGetPO.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subLoadPrj_po_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subLoadPrj_po.End
+
+Program.Sub.cmdsave_api_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_api_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sVendor.Declare
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_INVOICE_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sVendor.Set(V.Screen.F_INVOICE_ASSG!lblVendor.Caption)
+	V.Local.sSql.Set("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='I' AND VALUE='",V.Screen.F_INVOICE_ASSG!txtAPInvoice.Text,"' AND VALUE2 = '",V.Local.sVendor.Trim,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSaveAPI",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveAPI.EOF,=,"True")
+		F.ODBC.Conx!rstSaveAPI.AddNew
+		F.ODBC.Conx!rstSaveAPI.Set!ID_PRJ(V.Screen.F_INVOICE_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveAPI.Set!VALUE(V.Screen.F_INVOICE_ASSG!txtAPInvoice.Text)
+		F.ODBC.Conx!rstSaveAPI.Set!VALUE2(V.Local.sVendor.Trim)
+		F.ODBC.Conx!rstSaveAPI.Set!TYPE("I")
+		F.ODBC.Conx!rstSaveAPI.Update
+		F.Intrinsic.UI.Msgbox("Project ID - AP Invoice Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSaveAPI.Set!ID_PRJ(V.Screen.F_INVOICE_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveAPI.Update
+		F.Intrinsic.UI.Msgbox("Project ID - AP Invoice Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstSaveAPI.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_api_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_api_click.End
+
+Program.Sub.cmddelete_api_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_api_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sVendor.Declare
+V.Local.sSql.Declare(String)
+
+V.Local.sVendor.Set(V.Screen.F_INVOICE_ASSG!lblVendor.Caption)
+V.Local.sSql.Set("Select ID_PRJ, VALUE From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='I' AND VALUE='",V.Screen.F_INVOICE_ASSG!txtAPInvoice.Text,"' AND VALUE2 = '",V.Local.sVendor.Trim,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelAPI",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelAPI.EOF,=,"False")
+	F.ODBC.Conx!rstDelAPI.Delete
+	F.ODBC.Conx!rstDelAPI.Update
+	F.Intrinsic.UI.Msgbox("Project ID - AP Invoice Info Deleted","PRJ ID Message")
+	Gui.F_INVOICE_ASSG.txtPRJ.Text("")
+	Gui.F_INVOICE_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelAPI.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_api_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmddelete_api_click.End
+
+Program.Sub.cmdprjid_api_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_api_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project","conx","Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_INVOICE_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_INVOICE_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_api_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprjid_api_click.End
+
+Program.Sub.subLoadPrj_api.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_api_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sInvoice.Declare
+V.Local.sVendor.Declare
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sInvoice.Set(V.Screen.F_INVOICE_ASSG!txtAPInvoice.Text)
+V.Local.sVendor.Set(V.Screen.F_INVOICE_ASSG!lblVendor.Caption)
+V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='I' AND VALUE='",V.Local.sInvoice.Trim,"' AND VALUE2 = '",V.Local.sVendor.Trim,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetAPI",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstGetAPI.EOF,=,"False")
+	Gui.F_INVOICE_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetAPI.FieldVal!ID_PRJ)
+	Gui.F_INVOICE_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetAPI.FieldVal!DESCR_PRJ)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstGetAPI.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subLoadPrj_api_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subLoadPrj_api.End
+
+Program.Sub.cmdprjid_wo_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_wo_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project",conx,"Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_JOB_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_JOB_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_wo_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprjid_wo_click.End
+
+Program.Sub.subLoadPrj_wo.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_wo_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sWO.Declare
+V.Local.sSuffix.Declare
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sWO.Set(V.Passed.000003)
+V.Local.sSuffix.Set(V.Passed.000004)
+V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+F.Intrinsic.String.Concat(V.Local.sSql," AND GAB_PRJ_DATAS.TYPE='J' AND GAB_PRJ_DATAS.VALUE='",V.Local.sWO.Trim,"'",V.Local.sSql)
+F.Intrinsic.String.Concat(V.Local.sSql," AND GAB_PRJ_DATAS.VALUE2 = '",V.Local.sSuffix.Trim,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetWO",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstGetWO.EOF,=,"False")
+	Gui.F_JOB_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetWO.FieldVal!ID_PRJ)
+	Gui.F_JOB_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetWO.FieldVal!DESCR_PRJ)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstGetWO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subLoadPrj_wo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subLoadPrj_wo.End
+
+Program.Sub.cmdsave_wo_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_wo_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_JOB_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sSql.Set("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='J' AND VALUE='",V.Screen.F_JOB_ASSG!txtWO.Text,"'",V.Local.sSql)
+	F.Intrinsic.String.Concat(V.Local.sSql," AND VALUE2 = '",V.Screen.F_JOB_ASSG!txtSuffix.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSaveWO",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveWO.EOF,=,"True")
+		F.ODBC.Conx!rstSaveWO.AddNew
+		F.ODBC.Conx!rstSaveWO.Set!ID_PRJ(V.Screen.F_JOB_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveWO.Set!VALUE(V.Screen.F_JOB_ASSG!txtWO.Text)
+		F.ODBC.Conx!rstSaveWO.Set!VALUE2(V.Screen.F_JOB_ASSG!txtSuffix.Text)
+		F.ODBC.Conx!rstSaveWO.Set!TYPE("J")
+		F.ODBC.Conx!rstSaveWO.Update
+		F.Intrinsic.UI.Msgbox("Project ID - Job Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSaveWO.Set!ID_PRJ(V.Screen.F_JOB_ASSG!txtPRJ.Text)
+		F.ODBC.Conx!rstSaveWO.Update
+		F.Intrinsic.UI.Msgbox("Project ID - WO Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstSaveWO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_wo_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdsave_wo_click.End
+
+Program.Sub.cmddelete_wo_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_wo_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+V.Local.sSql.Set("Select ID_PRJ, VALUE, VALUE2 From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='J' AND VALUE='",V.Screen.F_JOB_ASSG!txtWO.Text,"' and value2='",V.Screen.F_JOB_ASSG!txtSuffix.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelWO",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelWO.EOF,=,"False")
+	F.ODBC.Conx!rstDelWO.Delete
+	F.ODBC.Conx!rstDelWO.Update
+	F.Intrinsic.UI.Msgbox("Project ID - JOB Info Deleted","PRJ ID Message")
+	Gui.F_JOB_ASSG.txtPRJ.Text("")
+	Gui.F_JOB_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelWO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_wo_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmddelete_wo_click.End
+
+Program.Sub.CheckProjectPR.Start
+F.Intrinsic.Control.SetErrorHandler("CheckProjectPR_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iLine.Declare
+V.Local.sGLAccount.Declare
+V.Local.sPR.Declare
+V.Local.sSQL.Declare
+
+F.Intrinsic.String.LPad(V.Passed.000003,"0",6,V.Local.sPR)
+V.Local.iLine.Set(V.Passed.000001)
+
+
+F.Intrinsic.Control.If(V.Local.sPR.Trim,<>,"")
+	F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	
+	V.Local.sGLAccount.Set(V.Passed.000036)
+	F.Intrinsic.String.Build("select id from gab_4996_cogs_acct where gl_account = '{0}'",V.Local.sGLAccount.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.ODBC.conx!rst.Close
+		F.Intrinsic.String.Build("Select ID_PRJ From GAB_PRJ_DATAS  WHERE TYPE='R' AND VALUE='{0}' AND VALUE2 = '{1}'",V.Local.sPR.Trim,V.Local.iLine,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+			F.Intrinsic.UI.Msgbox("Please assign a project to this PR line")
+			V.Passed.777777.Set(1)
+'			Gui.F_PR_ASSG.txtPR.Text(V.Local.sPR)
+'			Gui.F_PR_ASSG.txtPRLine.Text(V.Local.iLine)
+'			Gui.F_PR_ASSG..Show
+'		F.Intrinsic.Control.Else
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Close	
+		F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.Else
+		F.ODBC.conx!rst.Close	
+		F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckProjectPR_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.CheckProjectPR.End
+
+Program.Sub.cmdprjid_pr_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_pr_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project",conx,"Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_PR_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_PR_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_pr_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdprjid_pr_click.End
+
+Program.Sub.cmdsave_pr_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_pr_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sLine.Declare
+
+V.Local.sLine.Set(V.Screen.F_PR_ASSG!txtPRLine.Text)
+
+F.Intrinsic.Control.If(V.Screen.F_PR_ASSG!txtPRJ.Text,<>,"")
+	V.Local.sSql.Set("Select ID_PRJ, VALUE,VALUE2,TYPE From GAB_PRJ_DATAS ")
+	F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='R' AND VALUE='",V.Screen.F_PR_ASSG!txtPR.Text,"' AND VALUE2='",V.Screen.F_PR_ASSG!txtPRLine.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSavePO",V.Local.sSql)
+	F.Intrinsic.Control.If(V.Local.sLine.Trim,<>,"")
+		F.Intrinsic.Control.If(V.ODBC.Conx!rstSavePO.EOF,=,"True")
+			F.Intrinsic.String.Build("insert into GAB_PRJ_DATAS(ID_PRJ,VALUE,VALUE2,TYPE) values({0},'{1}','{2}','R');",V.Screen.F_PR_ASSG!txtPRJ.Text,V.Screen.F_PR_ASSG!txtPR.Text,V.Screen.F_PR_ASSG!txtPRLine.Text,V.Local.sSql)
+			F.ODBC.Connection!conx.Execute(V.Local.sSql)
+			F.Intrinsic.UI.Msgbox("Project ID - Purchase Request Info Saved","PRJ ID Message")
+		F.Intrinsic.Control.Else
+			F.ODBC.Conx!rstSavePO.Set!ID_PRJ(V.Screen.F_PR_ASSG!txtPRJ.Text)
+			F.ODBC.Conx!rstSavePO.Update
+			F.Intrinsic.UI.Msgbox("Project ID - Purchase Request Info Saved","PRJ ID Message")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Failed to save. The PR line is blank.","Project Assign (4996)" )
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rstSavePO.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_pr_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdsave_pr_click.End
+
+Program.Sub.cmddelete_pr_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_pr_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+
+V.Local.sSql.Set("Select ID_PRJ, VALUE, VALUE2 From GAB_PRJ_DATAS ")
+F.Intrinsic.String.Concat(V.Local.sSql," WHERE TYPE='R' AND VALUE='",V.Screen.F_PR_ASSG!txtPR.Text,"' AND VALUE2='",V.Screen.F_PR_ASSG!txtPRLine.Text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelPO",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelPO.EOF,=,"False")
+	F.ODBC.Conx!rstDelPO.Delete
+	F.ODBC.Conx!rstDelPO.Update
+	F.Intrinsic.UI.Msgbox("Project ID - Purchase Request Info Deleted","PRJ ID Message")
+	Gui.F_PR_ASSG.txtPRJ.Text("")
+	Gui.F_PR_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelPO.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_pr_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmddelete_pr_click.End
+
+Program.Sub.subLoadPrj_pr.Start
+F.Intrinsic.Control.SetErrorHandler("subLoadPrj_pr_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+V.Local.sSql.Set("select GAB_PRJ_DATAS.ID_PRJ,DESCR_PRJ from GAB_PRJ_DATAS, GAB_PRJ_DESC WHERE GAB_PRJ_DATAS.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+F.Intrinsic.String.Concat(V.Local.sSql," AND TYPE='R' AND VALUE='",V.Screen.F_PR_ASSG!txtPR.Text,"' AND VALUE2='",V.Screen.F_PR_ASSG!txtPRLine.text,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetPO",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstGetPO.EOF,=,"False")
+	Gui.F_PR_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetPO.FieldVal!ID_PRJ)
+	Gui.F_PR_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetPO.FieldVal!DESCR_PRJ)
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstGetPO.Close
+
+F.Intrinsic.Control.Label("subLoadPrj_pr_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.subLoadPrj_pr.End
+
+Program.Sub.ConvertPRtoPO.Start
+F.Intrinsic.Control.SetErrorHandler("ConvertPRtoPO_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare
+V.Local.sPO.Declare
+V.Local.sSQL.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.String.LPad(V.Passed.009000,"0",7,V.Local.sPO)
+
+'Only if REQUISITION_NO is not blank
+F.Intrinsic.String.Build("SELECT LEFT(RECORD_NO,3) as POLine, REQUISITION_NO as PR, REQUISITION_LINE as Line FROM V_PO_LINES WHERE PURCHASE_ORDER = '{0}' and requisition_no <> '' ORDER BY RECORD_NO",V.Local.sPO.Trim,V.Local.sSQL)
+'F.Intrinsic.String.Concat("SELECT RECORD_NO as POLine, REQUISITION_NO as PR, REQUISITION_LINE as Line FROM V_PO_LINES WHERE PURCHASE_ORDER = '",V.Local.sPO.Trim,"' and requisition_no <> '' ORDER BY RECORD_NO",V.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("dtPO","conx",V.Local.sSQL,True)
+F.Intrinsic.Control.If(V.DataTable.dtPO.RowCount,>,0)
+	F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtPO.RowCount--,1)
+		'Check if a project ID has been assigned for this PO
+		F.Intrinsic.String.Concat("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS  WHERE TYPE='P' AND VALUE='",V.Local.sPO,"' AND VALUE2='",V.DataTable.dtPO(V.Local.i1).POLine!FieldVal,"'",V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstCheck",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+			F.Intrinsic.String.Concat("Delete From GAB_PRJ_DATAS WHERE TYPE='R' AND VALUE='",V.DataTable.dtPO(V.Local.i1).PR!FieldValTrim,"' AND VALUE2='",V.DataTable.dtPO(V.Local.i1).Line!FieldVal,"'",V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS  WHERE TYPE='R' AND VALUE='",V.DataTable.dtPO(V.Local.i1).PR!FieldValTrim,"' AND VALUE2='",V.DataTable.dtPO(V.Local.i1).Line!FieldVal,"'",V.Local.sSQL)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+				F.ODBC.conx!rst.Set!VALUE(V.Local.sPO.Trim)
+				F.ODBC.conx!rst.Set!VALUE2(V.DataTable.dtPO(V.Local.i1).POLine!FieldValTrim)
+				F.ODBC.conx!rst.Set!TYPE("P")
+				F.ODBC.conx!rst.Update
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst.Close
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstCheck.Close
+	F.Intrinsic.Control.Next(V.Local.i1)
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Close("dtPO")
+
+F.ODBC.Connection!Conx.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ConvertPRtoPO_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ConvertPRtoPO.End
+
+Program.Sub.CheckPOLineGLAccount.Start
+F.Intrinsic.Control.SetErrorHandler("CheckPOLineGLAccount_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iPRLine.Declare
+V.Local.sGLAccount.Declare
+V.Local.sPO.Declare
+V.Local.sPOLine.Declare
+V.Local.sPR.Declare
+V.Local.sSQL.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+V.Local.sGLAccount.Set(V.Passed.000018)
+
+F.Intrinsic.String.Build("select id from GAB_4996_COGS_ACCT where gl_account = '{0}'",V.Local.sGLAccount.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+	V.Local.sPR.Set(V.Passed.000016)
+	F.Intrinsic.Math.ConvertToLong(V.Passed.000051,V.Local.iPRLine)
+	F.Intrinsic.String.LPad(V.Passed.008002,"0",7,V.Local.sPO)
+	Gui.F_PO_ASSG.txtPO.Text(V.Local.sPO)
+	F.Intrinsic.String.Left(V.Passed.008001,3,V.Local.sPOLine)
+	Gui.F_PO_ASSG.txtPOLine.Text(V.Local.sPOLine)
+	F.Intrinsic.Control.If(V.Local.sPR.Trim,<>,"")
+		'There is a purchase requisition, update data to PO
+		F.Intrinsic.String.Concat("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS  WHERE TYPE='R' AND VALUE='",V.Local.sPR.Trim,"' AND VALUE2='",V.Local.iPRLine,"'",V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstPR",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPR.EOF,=,False)
+			'ADD BY DENI Y (01/10/2020) CHECK EXISTING PO IF THE PO HAS CREATED THEN THE PR WILL BE REMOVED
+			F.Intrinsic.String.Build("Select ID_PRJ, VALUE, VALUE2, TYPE From GAB_PRJ_DATAS  WHERE TYPE='P' And VALUE = '{1}' And VALUE2 = '{2}'",V.ODBC.conx!rstPR.FieldVal!ID_PRJ,V.Local.sPO,V.Local.sPOLine,V.Local.sSQL)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPO",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstPO.EOF,=,False)
+				'Remove PR Record
+				F.ODBC.conx!rstPR.Delete
+			F.Intrinsic.Control.Else
+				'Update PR to PO
+				F.ODBC.conx!rstPR.Set!VALUE(V.Local.sPO.Trim)
+				F.ODBC.conx!rstPR.Set!VALUE2(V.Local.sPOLine.Trim)
+				F.ODBC.conx!rstPR.Set!TYPE("P")
+				F.ODBC.conx!rstPR.Update
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Conx!rstPO.Close
+		F.Intrinsic.Control.Else
+			'No project tag found
+			F.Intrinsic.Control.If(V.Local.sPO,<>,"0000000")
+				F.Intrinsic.Control.CallSub(Subloadprj_po)
+				Gui.F_PO_ASSG..Show
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPR.Close
+	F.Intrinsic.Control.Else
+		'No purchase requisition number
+		F.Intrinsic.Control.If(V.Local.sPO,<>,"0000000")
+			F.Intrinsic.Control.CallSub(Subloadprj_po)
+			Gui.F_PO_ASSG..Show
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckPOLineGLAccount_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.CheckPOLineGLAccount.End
+
+Program.Sub.UpdateGLBatchData.Start
+F.Intrinsic.Control.SetErrorHandler("UpdateGLBatchData_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare
+V.Local.i2.Declare
+V.Local.iID.Declare
+V.Local.sBatchID.Declare
+V.Local.sFilter.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+V.Local.sValue.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'Load expense account from setup
+F.Data.DataTable.CreateFromSQL("dtExp","conx","select rtrim(gl_account) as Account from GAB_4996_COGS_ACCT",True)
+
+F.Intrinsic.String.Build("select distinct batch_num as Batch, post_date as PostDate, reference as Reference from V_BI_COMB_JE_AUDIT where trmnl = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstB",V.Local.sSQL)
+F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstB.EOF,=,True)
+	F.Intrinsic.String.Build("select * from GAB_4996_GL_JRNL where batch = '{0}' and post_date = '{1}'",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstU",V.Local.sSQL)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstU.EOF,=,True)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstU.FieldVal!ID_PRJ,=,0)
+			F.Intrinsic.String.Build("insert into con_gl_vat_import(invoice,batch,vendor,lineno,taxcode,importk1no,reftaxvalue,refforeigninv,dateinvoice) values('{0}','{1}','{2}',{3},'{4}','',{5},'{6}','{7}');",V.ODBC.conx!rstB.FieldValTrim!Reference,V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstU.FieldValTrim!VENDOR,V.ODBC.conx!rstU.FieldVal!LINE,V.ODBC.conx!rstU.FieldValTrim!TAXCODE,V.ODBC.conx!rstU.FieldVal!REFTAXVALUE,V.ODBC.conx!rstU.FieldVal!BASEVALUE,V.ODBC.conx!rstU.FieldValPervasiveDate!DATEINVOICE,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+			F.Intrinsic.String.Build("delete from GAB_4996_GL_JRNL where batch = '{0}' and post_date = '{1}' and line = {2}",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.ODBC.conx!rstU.FieldVal!LINE,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			'Get new ID from GAB_PRJ_DATAS
+			F.ODBC.Connection!conx.ExecuteAndReturn("select max(id) from gab_prj_datas",V.Local.iID)
+			F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+			F.Intrinsic.String.Build("{0}*!*{1}",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstU.FieldVal!LINE,V.Local.sValue)
+			F.Intrinsic.String.Build("insert into GAB_PRJ_DATAS(id,id_prj,value,value2,type) values({0},{1},'{2}','{3}','F');",V.Local.iID,V.ODBC.conx!rstU.FieldVal!ID_PRJ,V.Local.sValue.Trim,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+			F.Intrinsic.String.Build("delete from GAB_4996_GL_JRNL where batch = '{0}' and post_date = '{1}' and line = {2}",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.ODBC.conx!rstU.FieldVal!LINE,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+			
+			'Check if tax code is not blank
+			F.Intrinsic.Control.If(V.ODBC.conx!rstU.FieldValTrim!TAXCODE,<>,"")
+				F.Intrinsic.String.Build("insert into con_gl_vat_import(invoice,batch,vendor,lineno,taxcode,importk1no,reftaxvalue,refforeigninv,dateinvoice) values('{0}','{1}','{2}',{3},'{4}','',{5},'{6}','{7}');",V.ODBC.conx!rstB.FieldValTrim!Reference,V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstU.FieldValTrim!VENDOR,V.ODBC.conx!rstU.FieldVal!LINE,V.ODBC.conx!rstU.FieldValTrim!TAXCODE,V.ODBC.conx!rstU.FieldVal!REFTAXVALUE,V.ODBC.conx!rstU.FieldVal!BASEVALUE,V.ODBC.conx!rstU.FieldValPervasiveDate!DATEINVOICE,V.Local.sSQL)
+				F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstU.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.conx!rstU.Close
+	
+	F.Intrinsic.String.Left(V.ODBC.conx!rstB.FieldValTrim!Batch,1,V.Local.sBatchID)
+	F.Intrinsic.Control.If(V.Local.sBatchID.Trim,=,"A")
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, invoice_no as Reference from v_gl_ap_detail where batch = '{0}' and post_date_sql = '{1}'",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.Local.sSQL)
+	F.Intrinsic.Control.ElseIf(V.Local.sBatchID.Trim,=,"J")
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, description as Reference from v_gl_journal_dtl where batch = '{0}' and post_date_sql = '{1}'",V.ODBC.conx!rstB.FieldValTrim!Batch,V.ODBC.conx!rstB.FieldValPervasiveDate!PostDate,V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.CreateFromSQL("dtBatch","conx",V.Local.sSQL,True)
+	
+	V.Local.sFilter.Set("")
+	F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtExp.RowCount--,1)
+		F.Intrinsic.Control.If(V.Local.sFilter.Trim,=,"")
+			F.Intrinsic.String.Build("Account = '{0}'",V.DataTable.dtExp(V.Local.i1).Account!FieldValTrim,V.Local.sFilter)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0} OR Account = '{1}'",V.Local.sFilter,V.DataTable.dtExp(V.Local.i1).Account!FieldValTrim,V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.i1)
+	F.Data.DataView.Create("dtBatch","dvBatch",22,V.Local.sFilter,"")
+	
+	F.Intrinsic.Control.If(V.DataView.dtBatch!dvBatch.RowCount,>,0)
+	
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(F_MULTINVC_ASSG_Unload)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.conx!rstB.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conx!rstB.Close
+
+'Check for COGS account posted
+'F.Intrinsic.String.Build("select account as Account, batch_num as Batch, post_date as PostDate, batch_line as Line from V_BI_COMB_JE_AUDIT where trmnl = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+'F.Data.DataTable.CreateFromSQL("dtBatch","conx",V.Local.sSQL)
+'F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtBatch.RowCount--,1)
+'	F.Intrinsic.String.Left(V.DataTable.dtBatch(V.Local.i1).Bath)
+'F.Intrinsic.Control.Next(V.Local.i1)
+'F.Data.DataTable.Close("dtBatch")
+
+F.Data.DataTable.Close("dtExp")
+
+F.ODBC.Connection!Conx.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("UpdateGLBatchData_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.UpdateGLBatchData.End
+
+Program.Sub.tagProject2PR.Start
+V.Local.sGLAccount.Declare
+V.Local.sPR.Declare
+V.Local.sPRLine.Declare
+V.Local.sSQL.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.String.LPad(V.Passed.000003,"0",6,V.Local.sPR)
+Gui.F_PR_ASSG.txtPR.Text(V.Local.sPR)
+V.Local.sPRLine.Set(V.Passed.000001)
+Gui.F_PR_ASSG.txtPRLine.Text(V.Local.sPRLine)
+F.Intrinsic.Control.If(V.Local.sPR.Trim,<>,"")
+	'Check if GL account is COGS account
+	V.Local.sGLAccount.Set(V.Passed.000036)
+	F.Intrinsic.String.Build("select id from gab_4996_cogs_acct where gl_account = '{0}'",V.Local.sGLAccount.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.Intrinsic.Control.CallSub(subloadprj_pr)
+		Gui.F_PR_ASSG..Show
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+Program.Sub.tagProject2PR.End
+
+Program.Sub.pr_unload.Start
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.CallSub(subEnd)
+Program.Sub.pr_unload.End
+
+Program.Sub.subLoadPrj_GL.Start
+V.Local.bExists.Declare
+V.Local.dPostDate.Declare(Date)
+V.Local.sBatch.Declare
+V.Local.sBatchLine.Declare
+V.Local.sDay.Declare
+V.Local.sGLAccount.Declare
+V.Local.sMonth.Declare
+V.Local.sPostDate.Declare
+V.Local.sSQL.Declare
+V.Local.sUser.Declare
+V.Local.sYear.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+V.Local.sGLAccount.Set(V.Passed.000012)
+
+F.Intrinsic.Control.If(V.Local.sGLAccount.Trim,<>,"")
+	F.Intrinsic.String.Build("select id from gab_4996_cogs_acct where gl_account = '{0}'",V.Local.sGLAccount.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.ODBC.Connection!conx.TableExists("GAB_PRJ_DATAS",V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists,=,False)
+			F.Intrinsic.UI.Msgbox("Table GAB_PRJ_DATAS doesn't exist","GAB Error Message")
+			F.Intrinsic.Control.End
+
+		
+		F.Intrinsic.Control.EndIf
+		
+		V.Local.sBatch.Set(V.Passed.000003)
+		V.Local.sBatchLine.Set(V.Passed.000117)
+		Gui.F_GL_ASSG.txtBatch.Text(V.Local.sBatch)
+		Gui.F_GL_ASSG.txtBatchLine.Text(V.Local.sBatchLine)
+		V.Local.sUser.Set(V.Caller.User)
+'		F.Intrinsic.Date.ConvertDString
+		V.Local.sPostDate.Set(V.Passed.000010)
+		F.Intrinsic.Date.ConvertDString(V.Local.sPostDate,"YYYYMMDD",V.Local.dPostDate)
+'		F.Intrinsic.Debug.ShowCallerInfo
+		F.Intrinsic.String.Left(V.Local.sPostDate,4,V.Local.sYear)
+		F.Intrinsic.String.Right(V.Local.sPostDate,2,V.Local.sDay)
+		F.Intrinsic.String.Mid(V.Local.sPostDate,5,2,V.Local.sMonth)
+		F.Intrinsic.String.Build("{0}-{1}-{2}",V.Local.sYear,V.Local.sMonth,V.Local.sDay,V.Local.sPostDate)
+'		F.Intrinsic.String.Build("select p_date from v_gl_jrnl_entry where batch = '{0}'",V.Local.sBatch.Trim,V.Local.sUser.Trim,V.Local.sSql)
+'		F.ODBC.Connection!conx.OpenRecordsetRO("rstGL",V.Local.sSql)
+'		V.Local.dPostDate.Set(V.ODBC.conx!rstGL.FieldVal!p_Date)
+'		F.ODBC.conx!rstGL.Close
+'		V.Local.sPostDate.Set(V.Passed.000000)
+'		F.Intrinsic.UI.Msgbox(V.Local.sPostDate)
+'		F.Intrinsic.String.Concat(V.Local.sBatch.Trim,"*!*",V.Local.sBatchLine.Trim,V.Local.sBatch)
+'		F.Intrinsic.Date.ConvertDString(V.Local.sPostDate,"YYYYMMDD",V.Local.dPostDate)
+		
+		F.Intrinsic.String.Build("select GAB_4996_GL_JRNL.ID_PRJ,DESCR_PRJ from GAB_4996_GL_JRNL, GAB_PRJ_DESC WHERE GAB_4996_GL_JRNL.ID_PRJ=GAB_PRJ_DESC.ID_PRJ AND BATCH='{0}' AND LINE = {1} and post_date = '{2}'",V.Local.sBatch.Trim,V.Local.sBatchLine,V.Local.dPostDate.PervasiveDate,V.Local.sSQL)
+'		V.Local.sSql.Set("select GAB_4996_GL_JRNL.ID_PRJ,DESCR_PRJ from GAB_4996_GL_JRNL, GAB_PRJ_DESC WHERE GAB_4996_GL_JRNL.ID_PRJ=GAB_PRJ_DESC.ID_PRJ ")
+'		F.Intrinsic.String.Concat(V.Local.sSql," AND BATCH='",V.Local.sBatch.Trim,"' AND LINE =",V.Local.sBatchLine,V.Local.sSql)
+		F.ODBC.Connection!Conx.OpenRecordsetRO("rstGetGL",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Conx!rstGetGL.EOF,=,"False")
+			F.Intrinsic.Control.If(V.ODBC.Conx!rstGetGL.FieldVal!ID_PRJ,<>,0)
+				Gui.F_GL_ASSG.txtPRJ.Text(V.ODBC.Conx!rstGetGL.FieldVal!ID_PRJ)
+				Gui.F_GL_ASSG.txtPRJN.Text(V.ODBC.Conx!rstGetGL.FieldVal!DESCR_PRJ)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Conx!rstGetGL.Close
+		
+		Gui.F_GL_ASSG..Show
+	F.Intrinsic.Control.Else
+		F.ODBC.conx!rst.Close
+		F.ODBC.Connection!conx.Close
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+Program.Sub.subLoadPrj_GL.End
+
+Program.Sub.cmdprjid_gl_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprjid_gl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Project",conx,"Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS<>'C'  ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Project ID was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_GL_ASSG.txtPRJ.Text(V.Local.sRet(0))
+	Gui.F_GL_ASSG.txtPRJN.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprjid_gl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdprjid_gl_click.End
+
+Program.Sub.cmdsave_gl_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_gl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.dPostDate.Declare(Date)
+V.Local.iBatchLine.Declare
+V.Local.iProject.Declare
+V.Local.sBatch.Declare
+V.Local.sBatchLine.Declare
+V.Local.sError.Declare(String)
+V.Local.sPostDate.Declare
+V.Local.sSql.Declare(String)
+V.Local.sUser.Declare
+
+F.Intrinsic.Control.If(V.Screen.F_GL_ASSG!txtPRJ.Text,<>,"")
+	V.Local.iProject.Set(V.Screen.F_GL_ASSG!txtPRJ.Text)
+	V.Local.sBatch.Set(V.Passed.000003)
+	V.Local.sBatchLine.Set(V.Passed.000117)
+	F.Intrinsic.Math.ConvertToLong(V.Local.sBatchLine,V.Local.iBatchLine)
+	V.Local.sUser.Set(V.Caller.User)
+	F.Intrinsic.String.Build("select p_date from v_gl_jrnl_entry where batch = '{0}'",V.Local.sBatch.Trim,V.Local.sUser.Trim,V.Local.sSql)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveGL.EOF,=,"False")
+		V.Local.dPostDate.Set(V.ODBC.conx!rst.FieldVal!p_Date)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Date.ConvertDString(Variable.Passed.000010,"YYYYMMDD",V.Local.dPostDate)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.String.Concat("Select ID_PRJ From GAB_4996_GL_JRNL WHERE BATCH='",V.Local.sBatch.Trim,"' AND LINE=",V.Local.iBatchLine," AND POST_DATE = '",V.Local.dPostDate.PervasiveDate,"'",V.Local.sSql)
+	F.ODBC.Connection!Conx.OpenRecordsetRW("rstSaveGL",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstSaveGL.EOF,=,"True")
+		V.Local.sUser.Set(V.Caller.User)
+		F.Intrinsic.String.Build("insert into GAB_4996_GL_JRNL(batch,line,id_prj,post_Date,taxcode) values('{0}',{1},{2},'{3}','');",V.Local.sBatch.Trim,V.Local.iBatchLine,V.Local.iProject,V.Local.dPostDate.PervasiveDate,V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(V.Local.sSql)
+		F.Intrinsic.UI.Msgbox("Project ID - GL Detail Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.Else
+		F.ODBC.Conx!rstSaveGL.Set!ID_PRJ(V.Local.iProject)
+		F.ODBC.Conx!rstSaveGL.Update
+		F.Intrinsic.UI.Msgbox("Project ID - GL Detail Info Saved","PRJ ID Message")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rstSaveGL.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_gl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdsave_gl_click.End
+
+Program.Sub.cmddelete_gl_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_gl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.dPostDate.Declare(Date)
+V.Local.sBatch.Declare
+V.Local.sBatchLine.Declare
+V.Local.sError.Declare(String)
+V.Local.sPostDate.Declare
+V.Local.sSql.Declare(String)
+V.Local.sUser.Declare
+
+V.Local.sBatch.Set(V.Passed.000003)
+V.Local.sBatchLine.Set(V.Passed.000117)
+V.Local.sUser.Set(V.Caller.User)
+F.Intrinsic.String.Build("select p_date from v_gl_jrnl_entry where batch = '{0}' and userid = '{1}'",V.Local.sBatch.Trim,V.Local.sUser.Trim,V.Local.sSql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rst",V.Local.sSql)
+V.Local.dPostDate.Set(V.ODBC.conx!rst.FieldVal!p_Date)
+F.ODBC.conx!rst.Close
+F.Intrinsic.String.Concat("Select ID_PRJ From GAB_4996_GL_JRNL WHERE BATCH='",V.Local.sBatch.Trim,"' AND LINE=",V.Local.sBatchLine," AND POST_DATE = '",V.Local.dPostDate.PervasiveDate,"'",V.Local.sSql)
+F.ODBC.Connection!Conx.OpenRecordsetRW("rstDelGL",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Conx!rstDelGL.EOF,=,"False")
+	F.ODBC.Conx!rstDelGL.Set!ID_PRJ(0)
+	F.ODBC.Conx!rstDelGL.Update
+	F.Intrinsic.UI.Msgbox("Project ID - GL Detail Info Deleted","PRJ ID Message")
+	Gui.F_GL_ASSG.txtPRJ.Text("")
+	Gui.F_GL_ASSG.txtPRJN.Text("")
+F.Intrinsic.Control.EndIf
+F.ODBC.Conx!rstDelGL.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_gl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmddelete_gl_click.End
+
+Program.Sub.checkPrjSO.Start
+F.Intrinsic.Control.SetErrorHandler("checkPrjSO_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare
+
+V.Local.sOrder.Declare
+V.Local.sSQL.Declare
+
+F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+F.Intrinsic.String.Build("select * from GAB_PRJ_DATAS where value = '{0}' and type = 'O'",V.Local.sOrder.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF)
+	Gui.F_ORDER_ASSG.txtOrder.Text(V.Local.sOrder)
+	
+	Gui.F_ORDER_ASSG..Show
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.Label("checkPrjSO_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.checkPrjSO.End
+
+Program.Sub.checkPrjAPI.Start
+V.Local.sGLAccount.Declare
+V.Local.sInvoice.Declare
+V.Local.sSQL.Declare
+
+V.Local.sGLAccount.Set(V.Passed.000014)
+
+F.Intrinsic.Control.If(V.Local.sGLAccount.Trim,<>,"")
+	F.Intrinsic.String.Build("select * from GAB_4996_COGS_ACCT where gl_account = '{0}'",V.Local.sGLAccount.Trim,V.Local.sSQL)
+	F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+		F.ODBC.conx!rst.Close
+		V.Local.sInvoice.Set(V.Passed.000018)
+		F.Intrinsic.String.Build("select * from GAB_PRJ_DATAS where value = '{0}' and type = 'I'",V.Local.sInvoice.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF)
+			Gui.F_INVOICE_ASSG.txtAPInvoice.Text(V.Local.sInvoice.Trim)
+			F.Intrinsic.Control.CallSub(Subloadprj_api)
+			Gui.F_INVOICE_ASSG..Show
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.EndIf
+Program.Sub.checkPrjAPI.End
+
+Program.Sub.LoadMultipleAPInvoice.Start
+V.Local.i1.Declare
+V.Local.iRowCount.Declare
+V.Local.sFilter.Declare
+V.Local.sRet.Declare
+V.Local.sRow.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.BDF.ReadRowCount("BDF",V.Local.iRowCount)
+F.Intrinsic.Math.Sub(V.Local.iRowCount,1,V.Local.iRowCount)
+
+'Load expense account from setup
+F.Data.DataTable.CreateFromSQL("dtExp","conx","select rtrim(gl_account) as GLAccount from GAB_4996_COGS_ACCT",True)
+
+F.Data.DataTable.Create("dtAP",True)
+F.Data.DataTable.AddColumn("dtAP","Line","Long")
+F.Data.DataTable.AddColumn("dtAP","GLAccount","String")
+F.Data.DataTable.AddColumn("dtAP","Description","String")
+F.Data.DataTable.AddColumn("dtAP","Project","Long",0)
+'Count the number of selected rows
+F.Intrinsic.Control.For(V.Local.i1,0,V.Local.iRowCount,1)
+	F.Intrinsic.BDF.ReadRow("BDF",V.Local.i1,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+	F.Intrinsic.String.Build("GLAccount = '{0}'",V.Local.sRow(2).Trim,V.Local.sFilter)
+	F.Data.DataTable.Select("dtExp",V.Local.sFilter,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+		F.Data.DataTable.AddRow("dtAP","Line",V.Local.sRow(0),"GLAccount",V.Local.sRow(2).Trim,"Description",V.Local.sRow(4).Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Data.DataTable.Close("dtExp")
+
+F.Intrinsic.Control.If(V.DataTable.dtAP.RowCount,>,0)
+	Gui.F_MULTINVC_ASSG.GsGCAP.AddGridviewFromDatatable("gvAP","dtAP")
+	Gui.F_MULTINVC_ASSG.GsGCAP.MainView("gvAP")
+	
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Line","HeaderHAlignment","Center")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","GLAccount","HeaderHAlignment","Center")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Description","HeaderHAlignment","Center")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Project","HeaderHAlignment","Center")
+	
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Line","MinWidth","50")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","GLAccount","MinWidth","110")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Description","MinWidth","140")
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Project","MinWidth","80")
+	
+	Gui.F_MULTINVC_ASSG.GsGCAP.SetColumnProperty("gvAP","Project","AllowEdit",False)
+	
+	Gui.F_MULTINVC_ASSG..Show
+F.Intrinsic.Control.Else
+	F.Data.DataTable.Close("dtAP")
+	F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.CallSub(subEnd)
+F.Intrinsic.Control.EndIf
+Program.Sub.LoadMultipleAPInvoice.End
+
+Program.Sub.F_MULTINVC_ASSG_Unload.Start
+V.Local.sRet.Declare
+
+F.Intrinsic.Control.If(V.DataTable.dtAP.Exists,=,True)
+	F.Intrinsic.Control.If(V.DataTable.dtAP.RowCount,>,0)
+		F.Data.DataTable.Select("dtAP","Project = 0",V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+			F.Intrinsic.UI.Msgbox("Project must be assigned to all lines")
+			V.Passed.777777.Set(1)
+		F.Intrinsic.Control.Else	
+			
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.Close("dtAP")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.CallSub(subEnd)
+Program.Sub.F_MULTINVC_ASSG_Unload.End
+
+Program.Sub.GsGCAP_RowCellClick.Start
+V.Local.iWidths.Declare
+V.Local.sRet.Declare
+V.Local.sTitles.Declare
+
+F.Intrinsic.Control.If(V.Args.Column,=,"Project")
+	F.Intrinsic.String.Split("PRJ ID*!*Description*!*Status","*!*",V.Local.sTitles)
+	F.Intrinsic.String.Split("1000*!*5250*!*800","*!*",V.Local.iWidths)
+	
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser("Select a Project","conx","Select ID_PRJ, DESCR_PRJ, STATUS FROM GAB_PRJ_DESC WHERE STATUS <> 'C' ORDER BY ID_PRJ DESC",V.Local.sTitles,V.Local.iWidths,5800,5800,V.Local.sRet)
+	
+	F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+		F.Intrinsic.UI.Msgbox("No Project ID was selected")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Data.DataTable.SetValue("dtAP",V.Args.RowIndex,"Project",V.Local.sRet(0))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+Program.Sub.GsGCAP_RowCellClick.End
+
+Program.Sub.checkPrjQte.Start
+F.Intrinsic.Control.SetErrorHandler("checkPrjQte_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare
+
+V.Local.sOrder.Declare
+V.Local.sSQL.Declare
+
+F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Local.sOrder)
+F.Intrinsic.String.Build("select * from GAB_PRJ_DATAS where value = '{0}' and type = 'Q'",V.Local.sOrder.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF)
+	Gui.F_QUOTE_ASSG.txtQuote.Text(V.Local.sOrder)
+	
+	Gui.F_QUOTE_ASSG..Show
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.Label("checkPrjQte_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.checkPrjQte.End
+
+Program.Sub.checkPrjWO.Start
+F.Intrinsic.Control.SetErrorHandler("checkPrjWO_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare
+
+V.Local.sSQL.Declare
+V.Local.sSuffix.Declare
+V.Local.sWO.Declare
+
+V.Local.sWO.Set(V.Passed.009000)
+V.Local.sSuffix.Set(V.Passed.009001)
+F.Intrinsic.String.Build("select * from GAB_PRJ_DATAS where value = '{0}' and value2 = '{1}' and type = 'J'",V.Local.sWO.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF)
+	Gui.F_JOB_ASSG.txtWO.Text(V.Local.sWO.Trim)
+	Gui.F_JOB_ASSG.txtSuffix.Text(V.Local.sSuffix.Trim)
+	
+	Gui.F_JOB_ASSG..Show
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.Label("checkPrjWO_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4996_PROJECT_ASSIGN.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.checkPrjWO.End
+
+Program.Sub.Comments.Start
+${$0$}$GAB_PRJ_ASSIGN$}$RRC$}$7/3/2014$}$False
+${$1$}$$}$$}$11$}$17170$}$PUS064LN-SCRIPT-2-HOOK (PO LINES)$}$12:00:00 AM$}$(Program: PUR064GI; Screen: PUS064LN)
+${$1$}$$}$$}$10$}$17050$}$PUS064LN-POPULATE-HOOK (PO LINES)$}$12:00:00 AM$}$(Program: PUR064GI; Screen: PUS064LN)
+${$1$}$$}$$}$9$}$16680$}$Script 2 Hook$}$12:00:00 AM$}$(Program: JB0010GI; Screen: JBS0010)
+${$1$}$$}$$}$8$}$16630$}$Populate Hook$}$12:00:00 AM$}$(Program: JB0010GI; Screen: JBS0010??)
+${$1$}$$}$$}$7$}$35122$}$APS0043A-SCRIPT-2-HOOK$}$12:00:00 AM$}$(Program: AP0043GI; Screen: APS0043A)
+${$1$}$$}$$}$6$}$35105$}$APS0043A-POPULATE-HOOK$}$12:00:00 AM$}$(Program: AP0043GI; Screen: APS0043A)
+${$1$}$$}$$}$3$}$11920$}$OES0200A-SCRIPT-2-HOOK$}$12:00:00 AM$}$(Program: ORD200; Screen: OES0200A)
+${$1$}$$}$$}$2$}$11560$}$OES0200A-POPULATE-HOOK$}$12:00:00 AM$}$(Program: ORD200; Screen: OES0200A)
+${$1$}$$}$$}$1$}$10970$}$QTS0200A-SCRIPT-2-HOOK$}$12:00:00 AM$}$(Program: QTE200; Screen: QTS0200A)
+${$1$}$$}$$}$0$}$10710$}$QTS0200A-POPULATE-HOOK$}$12:00:00 AM$}$(Program: QTE200; Screen: QTS0200A)
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Table Required: GAB_PRJ_DATAS
+${$5$}$2.0.0.0$}$2
+${$6$}$dyunus$}$20231130110823383$}$xZ6SHi8g7O0Qsxe6AiO2NH3PnOKQRy0ThU/mhTLrqpHg11PM5eILUz3hErAY7s3/liAS5eCi1Qc=
+Program.Sub.Comments.End
