@@ -1,0 +1,201 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Voucher..Create
+Gui.F_Voucher..Caption("Cash Voucher Reprint [5060]")
+Gui.F_Voucher..Size(16950,7980)
+Gui.F_Voucher..MinX(0)
+Gui.F_Voucher..MinY(0)
+Gui.F_Voucher..Position(0,0)
+Gui.F_Voucher..BackColor(-2147483633)
+Gui.F_Voucher..MousePointer(0)
+Gui.F_Voucher..Event(UnLoad,Unload)
+Gui.F_Voucher.cmdOpen.Create(Button)
+Gui.F_Voucher.cmdOpen.Size(2445,630)
+Gui.F_Voucher.cmdOpen.Position(105,120)
+Gui.F_Voucher.cmdOpen.Caption("Open")
+Gui.F_Voucher.cmdOpen.FontSize(9)
+Gui.F_Voucher.cmdOpen.Event(Click,cmdOpen_Click)
+Gui.F_Voucher.GsGCBatch.Create(GsGridControl)
+Gui.F_Voucher.GsGCBatch.Size(16515,6435)
+Gui.F_Voucher.GsGCBatch.Position(120,840)
+Gui.F_Voucher.cmdPrint.Create(Button)
+Gui.F_Voucher.cmdPrint.Size(2445,630)
+Gui.F_Voucher.cmdPrint.Position(2610,120)
+Gui.F_Voucher.cmdPrint.Caption("Print")
+Gui.F_Voucher.cmdPrint.FontSize(9)
+Gui.F_Voucher.cmdPrint.Event(Click,cmdPrint_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.dateBatch.Declare
+V.Global.sBatch.Declare
+V.Global.sAccount.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+V.Local.sIcon.Declare
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,2000)
+
+F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,V.Local.sIcon)
+Gui.F_Voucher..Icon(V.Local.sIcon)
+
+Gui.F_Voucher.GsGCBatch.Anchor(15)
+Gui.F_Voucher.cmdPrint.Visible(False)
+
+Gui.F_Voucher..Show
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.If(V.DataTable.dtBatch.Exists)
+	F.Data.DataTable.Close("dtBatch")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+Program.Sub.Unload.End
+
+Program.Sub.cmdOpen_Click.Start
+V.Local.iWidths.Declare
+V.Local.sBatchID.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+V.Local.sTitles.Declare
+
+F.Intrinsic.String.Split("Batch*!*Post Date*!*Cash Account","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*1000*!*1000","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a Batch","conx","select distinct(batch), post_date_sql, GL_Account from GAB_5060_CASH_CLEAR order by batch",V.Local.sTitles,V.Local.iWidths,12500,10000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	Gui.F_Voucher.GsGCBatch.Visible(False)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	
+	V.Global.dateBatch.Set(V.Local.sRet(1))
+	V.Global.sBatch.Set(V.Local.sRet(0))
+	V.Global.sAccount.Set(V.Local.sRet(2))
+	
+	F.Intrinsic.String.Left(V.Local.sRet(0),1,V.Local.sBatchID)
+	
+	F.Intrinsic.Control.If(V.DataTable.dtBatch.Exists)
+		F.Data.DataTable.Close("dtBatch")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sBatchID.Trim,=,"R")
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, cust_name as Reference, invoice_no as Description, amount_cmpny as Amount1, amount_oe as Amount2 from v_gl_ar_detail where batch = '{0}' and post_date_sql = '{1}' order by line",V.Local.sRet(0).Trim,V.Global.dateBatch.PervasiveDate,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtBatch","conx",V.Local.sSQL,True)
+	F.Intrinsic.Control.ElseIf(V.Local.sBatchID.Trim,=,"A")
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, check_name as Reference, invoice_no as Description, amount_cmpny as Amount1,Check_Net_Vend as Amount2 from v_gl_ap_check_dtl where batch = '{0}' and post_date_sql = '{1}' order by line",V.Local.sRet(0).Trim,V.Global.dateBatch.PervasiveDate,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtBatchTemp","conx",V.Local.sSQL,True)
+		
+		F.Intrinsic.String.Build("select A.batch+convert(A.line,sql_char) as BATCHLINE, A.Batch+A.Cust_Vendor as BI, A.batch as BATCH, A.post_Date_sql as POSTDATE, GL_Number, Cast('1900-01-01' as DATE) as INVCDATE, Cast('1900-01-01' as DATE) as CHECKDATE, '' as CHECKNUM, A.line as LINE, '' as VENDCUST, '' as DESCRIPTION, ' ' as REFERENCE, '' as JEREF, '' as INVCNOTE, CONVERT(0,SQL_float) as AMOUNT, invoice_no as INVOICE, '' as CURRENCY, CONVERT(0, SQL_FLOAT) As AMOUNTF, convert(0, sql_float) as EXCHRATE from v_gl_ap_check_dtl A Inner Join (Select Batch, Post_Date_Sql from V_GL_Detail Group by Batch,Post_Date_Sql) B on A.Batch = B.Batch and Cast(A.Post_Date_sql as Date) = Cast(B.Post_Date_sql as Date) where (Left(A.Batch,1) = 'A' or Left(A.Batch,1) = 'K') and gl_number = '{0}' and A.post_date_sql = '{1}' and A.Batch = '{2}' order by batch, A.post_Date_sql, line",V.Global.sAccount.Trim,V.Global.dateBatch.PervasiveDate,V.Global.sBatch,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtCheckTemp1","conx",V.Local.sSQL,True)
+	
+		F.Intrinsic.String.Build("select A.BATCH, sum(convert(-B.Amount_Cmpny,sql_float)) as AMOUNT, sum(convert(-B.Check_Net_Vend,sql_float)) as AMOUNTF from (SELECT batch_num as BATCH, check_num FROM v_ap_open_items where gl_account = '{0}' AND date_batch = '{1}' AND Batch_num = '{2}' group by Batch, check_num) A Left Join (Select Batch, rtrim(Check_Number) as check_number, if(Check_Disc_Cmpny<>0,Check_Net_Cmpny,Amount_Cmpny) as Amount_Cmpny, Check_Net_Vend From V_GL_AP_Check_DTL Where Post_Date_SQL = '{1}' and Check_Number <> '')B on A.batch = B.Batch and Rtrim(A.check_num) = B.Check_Number group by A.Batch union all select A.Batch, sum(convert(-B.Amount_Cmpny,sql_float)) as AMOUNT, sum(convert(-B.Check_Net_Vend,sql_float)) as AMOUNTF from (SELECT batch_num as BATCH, check_num FROM v_ap_hist where gl_account = '{0}' AND date_batch = '{1}' AND Batch_num = '{2}' group by Batch, check_num) A Left Join (Select Batch, rtrim(Check_Number) as check_number, if(Check_Disc_Cmpny<>0,Check_Net_Cmpny,Amount_Cmpny) as Amount_Cmpny, Check_Net_Vend From V_GL_AP_Check_DTL Where Post_Date_SQL = '{1}' and Check_Number <> '')B on A.batch = B.Batch and Rtrim(A.check_num) = Rtrim(B.check_number) group by A.Batch;",V.Global.sAccount.Trim, V.Global.dateBatch.PervasiveDate,V.Global.sBatch,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtCheckTemp2","conx",V.Local.sSQL,True)
+	
+		F.Data.Linq.Join("Leftjoin","datatable","dtCheckTemp1*!*A","datatable","dtCheckTemp2*!*B","A.Batch=B.Batch","A.BATCHLINE*!*A.BI*!*A.BATCH*!*A.GL_NUMBER*!*A.POSTDATE*!*A.INVCDATE*!*A.Line*!*A.DESCRIPTION*!*A.REFERENCE*!*A.JEREF*!*A.INVCNOTE*!*B.AMOUNT*!*B.AMOUNTF*!*A.INVOICE", "A.Batch,A.POSTDATE", "","","dTCheck",True)
+		F.Data.DataTable.Close("dtCheckTemp1")
+		F.Data.DataTable.Close("dtCheckTemp2")
+
+		F.Data.Linq.Join("Leftjoin","datatable","dtBatchTemp*!*A","datatable","dtCheck*!*B","A.Batch=B.Batch and A.Account=B.GL_NUMBER","A.BATCH*!*A.LINE*!*A.ACCOUNT*!*A.REFERENCE*!*A.DESCRIPTION*!*A.AMOUNT1*!*A.AMOUNT2*!*B.AMOUNTF", "A.Batch,A.POSTDATE", "","","dTBatch",True)
+		F.Data.DataTable.Close("dtBATCHTemp")
+		F.Data.DataTable.Close("dtCheck")
+		F.Data.DataTable.AddExpressionColumn("dtBatch", "AMOUNT3", "Float", "isnull(AMOUNTF,0)")
+		F.Data.DataTable.AddExpressionColumn("dtBatch", "AMOUNT4", "Float", "IIF([AMOUNT3]<>0,[AMOUNT3],[AMOUNT2])")
+		F.Data.DataTable.CopyColumn("dtBatch", "AMOUNT4","AMOUNT2")
+		
+	F.Intrinsic.Control.ElseIf(V.Local.sBatchID.Trim,=,"K")
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, check_name as Reference, invoice_no as Description, amount_cmpny as Amount1, Check_Net_Vend as Amount2 from v_gl_ap_check_dtl where batch = '{0}' and post_date_sql = '{1}' order by line",V.Local.sRet(0).Trim,V.Global.dateBatch.PervasiveDate,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtBatchTemp","conx",V.Local.sSQL,True)
+		
+		F.Intrinsic.String.Build("select A.batch+convert(A.line,sql_char) as BATCHLINE, A.Batch+A.Cust_Vendor as BI, A.batch as BATCH, A.post_Date_sql as POSTDATE, GL_Number, Cast('1900-01-01' as DATE) as INVCDATE, Cast('1900-01-01' as DATE) as CHECKDATE, '' as CHECKNUM, A.line as LINE, '' as VENDCUST, '' as DESCRIPTION, ' ' as REFERENCE, '' as JEREF, '' as INVCNOTE, CONVERT(0,SQL_float) as AMOUNT, invoice_no as INVOICE, '' as CURRENCY, CONVERT(0, SQL_FLOAT) As AMOUNTF, convert(0, sql_float) as EXCHRATE from v_gl_ap_check_dtl A Inner Join (Select Batch, Post_Date_Sql from V_GL_Detail Group by Batch,Post_Date_Sql) B on A.Batch = B.Batch and Cast(A.Post_Date_sql as Date) = Cast(B.Post_Date_sql as Date) where (Left(A.Batch,1) = 'A' or Left(A.Batch,1) = 'K') and gl_number = '{0}' and A.post_date_sql = '{1}' and A.Batch = '{2}' order by batch, A.post_Date_sql, line",V.Global.sAccount.Trim,V.Global.dateBatch.PervasiveDate,V.Global.sBatch,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtCheckTemp1","conx",V.Local.sSQL,True)
+	
+		F.Intrinsic.String.Build("select A.BATCH, sum(convert(-B.Amount_Cmpny,sql_float)) as AMOUNT, sum(convert(-B.Check_Net_Vend,sql_float)) as AMOUNTF from (SELECT batch_num as BATCH, check_num FROM v_ap_open_items where gl_account = '{0}' AND date_batch = '{1}' AND Batch_num = '{2}' group by Batch, check_num) A Left Join (Select Batch, rtrim(Check_Number) as check_number, if(Check_Disc_Cmpny<>0,Check_Net_Cmpny,Amount_Cmpny) as Amount_Cmpny, Check_Net_Vend From V_GL_AP_Check_DTL Where Post_Date_SQL = '{1}' and Check_Number <> '')B on A.batch = B.Batch and Rtrim(A.check_num) = B.Check_Number group by A.Batch union all select A.Batch, sum(convert(-B.Amount_Cmpny,sql_float)) as AMOUNT, sum(convert(-B.Check_Net_Vend,sql_float)) as AMOUNTF from (SELECT batch_num as BATCH, check_num FROM v_ap_hist where gl_account = '{0}' AND date_batch = '{1}' AND Batch_num = '{2}' group by Batch, check_num) A Left Join (Select Batch, rtrim(Check_Number) as check_number, if(Check_Disc_Cmpny<>0,Check_Net_Cmpny,Amount_Cmpny) as Amount_Cmpny, Check_Net_Vend From V_GL_AP_Check_DTL Where Post_Date_SQL = '{1}' and Check_Number <> '')B on A.batch = B.Batch and Rtrim(A.check_num) = Rtrim(B.check_number) group by A.Batch;",V.Global.sAccount.Trim, V.Global.dateBatch.PervasiveDate,V.Global.sBatch,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtCheckTemp2","conx",V.Local.sSQL,True)
+	
+		F.Data.Linq.Join("Leftjoin","datatable","dtCheckTemp1*!*A","datatable","dtCheckTemp2*!*B","A.Batch=B.Batch","A.BATCHLINE*!*A.BI*!*A.BATCH*!*A.GL_NUMBER*!*A.POSTDATE*!*A.INVCDATE*!*A.Line*!*A.DESCRIPTION*!*A.REFERENCE*!*A.JEREF*!*A.INVCNOTE*!*B.AMOUNT*!*B.AMOUNTF*!*A.INVOICE", "A.Batch,A.POSTDATE", "","","dTCheck",True)
+		F.Data.DataTable.Close("dtCheckTemp1")
+		F.Data.DataTable.Close("dtCheckTemp2")
+
+		F.Data.Linq.Join("Leftjoin","datatable","dtBatchTemp*!*A","datatable","dtCheck*!*B","A.Batch=B.Batch and A.Account=B.GL_NUMBER","A.BATCH*!*A.LINE*!*A.ACCOUNT*!*A.REFERENCE*!*A.DESCRIPTION*!*A.AMOUNT1*!*A.AMOUNT2*!*B.AMOUNTF", "A.Batch,A.POSTDATE", "","","dTBatch",True)
+		F.Data.DataTable.Close("dtBATCHTemp")
+		F.Data.DataTable.Close("dtCheck")
+		F.Data.DataTable.AddExpressionColumn("dtBatch", "AMOUNT3", "Float", "isnull(AMOUNTF,0)")
+		F.Data.DataTable.AddExpressionColumn("dtBatch", "AMOUNT4", "Float", "IIF([AMOUNT3]<>0,[AMOUNT3],[AMOUNT2])")
+		F.Data.DataTable.CopyColumn("dtBatch", "AMOUNT4","AMOUNT2")	
+		
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("select batch as Batch, line as Line, gl_number as Account, reference as Reference, description as Description, amount_cmpny as Amount1, 0 as Amount2 from v_gl_journal_dtl where batch = '{0}' and post_date_sql = '{1}' order by line",V.Local.sRet(0).Trim,V.Global.dateBatch.PervasiveDate,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtBatch","conx",V.Local.sSQL,True)
+	F.Intrinsic.Control.EndIf
+
+	F.Data.DataTable.AddExpressionColumn("dtBatch","BatchLine","String","Batch+Line")
+	
+	F.Intrinsic.Control.If(V.Local.sBatchID.Trim,=,"J")
+		F.Intrinsic.String.Build("select batch+convert(line,sql_char) as BatchLine,amount_forex as Amount from GAB_5060_BATCH_DTL where batch = '{0}' and post_date_sql = '{1}'",V.Global.sBatch.Trim,V.Global.dateBatch.PervasiveDate,V.Local.sSQL)
+		F.Data.Dictionary.CreateFromSQL("dicGL","conx",V.Local.sSQL)
+		F.Data.Dictionary.SetDefaultReturn("dicGL",0)
+		F.Data.DataTable.FillFromDictionary("dtBatch","dicGL","BatchLine","Amount2")
+		F.Data.Dictionary.Close("dicGL")
+	F.Intrinsic.Control.EndIf
+	
+	Gui.F_Voucher.GsGCBatch.AddGridviewFromDatatable("gvBatch","dtBatch")
+	Gui.F_Voucher.GsGCBatch.MainView("gvBatch")
+	
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Batch","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Line","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Account","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Reference","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Description","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount1","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount2","HeaderHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Batch","CellHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Line","CellHAlignment","Center")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Batch","MinWidth","70")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Line","MinWidth","50")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Account","MinWidth","120")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Reference","MinWidth","200")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Description","MinWidth","240")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount1","MinWidth","140")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount2","MinWidth","140")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Batch","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Line","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Account","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Reference","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Description","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount1","HeaderFontBold",True)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount2","HeaderFontBold",True)
+	
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","BatchLine","Visible",False)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","AMOUNTF","Visible",False)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","AMOUNT3","Visible",False)
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","AMOUNT4","Visible",False)
+	
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount1","DisplayCustomNumeric","#,###,##0.00")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount2","DisplayCustomNumeric","#,###,##0.00")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount1","Caption","Amount Base")
+	Gui.F_Voucher.GsGCBatch.SetColumnProperty("gvBatch","Amount2","Caption","Amount Forex")
+	
+	Gui.F_Voucher.cmdPrint.Visible(True)
+	Gui.F_Voucher.GsGCBatch.Visible(True)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdOpen_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+V.Local.sGABScript.Declare
+
+F.Global.General.SetPassedDataElement("Batch",V.Global.sBatch.Trim)
+F.Global.General.SetPassedDataElement("PostDate",V.Global.dateBatch)
+
+F.Global.General.SetPassedDataElement("Mode","PRINT")
+
+F.Intrinsic.String.Concat(V.Caller.GasDir,"\GAB_5060_PRINT_VOUCHER.g2u",V.Local.sGABScript)
+F.Global.General.CallSyncGAS(V.Local.sGABScript)
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$dyunus$}$20231009113215181$}$xZ6SHi8g7O0Qsxe6AiO2NH3PnOKQRy0T5YgjH0GTkCXm7jee96lO83cw0tvWQ2WOEhkFNJxONmw=
+Program.Sub.Comments.End
